@@ -1,0 +1,219 @@
+show();
+function show(){
+    console.log(" i am the show ");
+}
+// named function
+VM161:3  i am the show 
+undefined
+console.dir(show);
+VM219:1 ƒ show()length: 0name: "show"prototype: {}arguments: nullcaller: null[[FunctionLocation]]: VM161:2[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]
+undefined
+show;
+ƒ show(){
+    console.log(" i am the show ");
+}
+show.length;
+0
+show.name;
+'show'
+show;
+ƒ show(){
+    console.log(" i am the show ");
+}
+show();
+VM161:3  i am the show 
+undefined
+show(10,20);
+VM161:3  i am the show 
+undefined
+show([10,20],"Amit", true, {id:1001});
+VM161:3  i am the show 
+undefined
+show();
+function show(){
+    console.log(" i am the show ", arguments.length);
+}
+// named function
+VM508:3  i am the show  0
+undefined
+show();
+VM508:3  i am the show  0
+undefined
+show(10,20);
+VM508:3  i am the show  2
+undefined
+show(10,20, 90,100, 55);
+VM508:3  i am the show  5
+undefined
+function add(){
+    var sum = 0;
+    for(let i = 0; i<arguments.length; i++){
+        sum = sum + arguments[i];
+    }
+    return sum;
+}
+undefined
+add();
+0
+add(10,20);
+30
+add(10,20,30);
+60
+add(10,20,30,40,50);
+150
+add(10,20,30,"40",50);
+'604050'
+parseInt("100");
+100
+Number("100")
+100
+function add(){
+    var sum = 0;
+    for(let i = 0; i<arguments.length; i++){
+        sum = sum + parseInt(arguments[i]);
+    }
+    return sum;
+}
+undefined
+add(10,20,30,"40",50);
+150
+parseInt("ten");
+NaN
+NaN + 100
+NaN
+add(10,20,30,"ten",50);
+NaN
+function add(){
+    var sum = 0;
+    for(let i = 0; i<arguments.length; i++){
+        sum = sum + (isNaN(parseInt(arguments[i]))?0 : parseInt(arguments[i]));
+    }
+    return sum;
+}
+undefined
+add(10,20,30,"ten",50);
+110
+add(10,20,30,"ten",50,[90,100,"20","Amit"]);
+200
+parseInt([10,20,30]);
+10
+parseInt([10,20,30][0]);
+10
+function add(){
+    var sum = 0;
+    for(let i = 0; i<arguments.length; i++){
+        if(argument[i] instanceof Array){
+            for(let j = 0 ; j<arguments[i].length; j++){
+                sum = sum + (isNaN(parseInt(arguments[i][j]))?0 : parseInt(arguments[i][j]));
+            }
+            continue;
+        }
+        sum = sum + (isNaN(parseInt(arguments[i]))?0 : parseInt(arguments[i]));
+    }
+    return sum;
+}
+undefined
+add(1,"2",3,"four",[10,"20", "two"], 100);
+VM1343:4 Uncaught ReferenceError: argument is not defined
+    at add (<anonymous>:4:9)
+    at <anonymous>:1:1
+add @ VM1343:4
+(anonymous) @ VM1442:1
+function add(){
+    var sum = 0;
+    for(let i = 0; i<arguments.length; i++){
+        if(arguments[i] instanceof Array){
+            for(let j = 0 ; j<arguments[i].length; j++){
+                sum = sum + (isNaN(parseInt(arguments[i][j]))?0 : parseInt(arguments[i][j]));
+            }
+            continue;
+        }
+        sum = sum + (isNaN(parseInt(arguments[i]))?0 : parseInt(arguments[i]));
+    }
+    return sum;
+}
+undefined
+add(1,"2",3,"four",[10,"20", "two"], 100);
+136
+function add(){
+    var sum = 0;
+    for(let i = 0; i<arguments.length; i++){
+        if(arguments[i] instanceof Array){
+            for(let j = 0 ; j<arguments[i].length; j++){
+                sum = sum + (isNaN(parseInt(arguments[i][j]))?0 : parseInt(arguments[i][j]));
+            }
+            continue;
+        }
+        if(typeof arguments[i] ==='function'){
+            arguments[i] = arguments[i]();
+        }
+        sum = sum + (isNaN(parseInt(arguments[i]))?0 : parseInt(arguments[i]));
+    }
+    return sum;
+}
+undefined
+add(1,"2",3,"four",[10,"20", "two"], 100, function(){
+    return 1000;
+});
+1136
+function jQuery(){
+console.log("JQuery ");
+}
+undefined
+var $ = jQuery;
+undefined
+$();
+VM1744:2 JQuery 
+undefined
+$(document);
+VM1744:2 JQuery 
+undefined
+$(this);
+VM1744:2 JQuery 
+undefined
+$("p");
+VM1744:2 JQuery 
+undefined
+var x = 100;
+undefined
+//var fn;
+fn();
+var fn = function(){
+    console.log("I am the Function Expression or Anonymous Function");
+}
+VM2004:2 Uncaught TypeError: fn is not a function
+    at <anonymous>:2:1
+(anonymous) @ VM2004:2
+//var fn;
+console.log('FN is ', fn);
+fn();
+var fn = function(){
+    console.log("I am the Function Expression or Anonymous Function");
+}
+VM2056:2 FN is  undefined
+VM2056:3 Uncaught TypeError: fn is not a function
+    at <anonymous>:3:1
+(anonymous) @ VM2056:3
+undefined();
+VM2095:1 Uncaught TypeError: undefined is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM2095:1
+//var fn;
+console.log('FN is ', fn);
+if(typeof fn ==='function'){
+fn();
+}
+var fn = function(){
+    console.log("I am the Function Expression or Anonymous Function");
+}
+VM2124:2 FN is  undefined
+undefined
+function Customer(id, name){
+    var add = function(){
+        
+    }
+    var remove = function(){
+        
+    }
+}
+undefined

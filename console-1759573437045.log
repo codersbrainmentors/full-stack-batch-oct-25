@@ -1,0 +1,618 @@
+100 + null;
+100
+Number(null)
+0
+100 + Number(null)
+100
+100 + null
+100
+100 == null
+false
+100 == "100";
+true
+100.toString();
+VM365:1 Uncaught SyntaxError: Invalid or unexpected token
+var g = 100;
+undefined
+g.toString();
+'100'
+100 =="100"
+true
+100 == Number("100")
+true
+undefined == null;
+true
+undefined === null;
+false
+typeof undefined ;
+'undefined'
+typeof null;
+'object'
+10 === "10"
+false
+10 === 10;
+true
+10 == "10"
+true
+10 === "10"
+false
+undefined == null;
+true
+undefined === null;
+false
+typeof null;
+'object'
+var arr = [10,20,30,40]; // Box Syntax
+undefined
+var arr = []; // Box Syntax
+undefined
+typeof arr;
+'object'
+arr instanceof Array;
+true
+typeof Array;
+'function'
+arr = [10,true, [90,100],{}, "Amit"];
+(5) [10, true, Array(2), {…}, 'Amit']
+var dhoni = {age: 44, name:'MS Dhoni'};
+undefined
+dhoni.age;
+44
+var dhoni = {age: 44, name:'MS Dhoni', 50 : 55, 100: 11, "full address":"New Delhi"};
+undefined
+typeof dhoni;
+'object'
+dhoni;
+{50: 55, 100: 11, age: 44, name: 'MS Dhoni', full address: 'New Delhi'}50: 55100: 11age: 44full address: "New Delhi"name: "MS Dhoni"[[Prototype]]: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+dhoni.name;
+'MS Dhoni'
+dhoni.50;
+VM1559:1 Uncaught SyntaxError: Unexpected number
+dhoni.full address;
+VM1621:1 Uncaught SyntaxError: Unexpected identifier 'address'
+dhoni."full address";
+VM1626:1 Uncaught SyntaxError: Unexpected string
+dhoni[50];
+55
+dhoni['full address'];
+'New Delhi'
+dhoni.6 = 400;
+VM1739:1 Uncaught SyntaxError: Unexpected number
+dhoni[6] =400;
+400
+dhoni;
+{6: 400, 50: 55, 100: 11, age: 44, name: 'MS Dhoni', full address: 'New Delhi'}
+var key = 50;
+undefined
+key = "name";
+'name'
+dhoni.key;
+undefined
+dhoni[key];
+'MS Dhoni'
+var shoes = [{name:'Puma' , price: 2000, qty:10}, {name:'Nike' , price: 3000, qty:10}, {name:'Bata' , price: 1000, qty:20}, {name:'Adidas' , price: 12000, qty:10}];
+undefined
+typeof shoes;
+'object'
+shoes instanceof Array;
+true
+for(var i = 0; i<shoes.length; i++){
+    console.log(shoes[i]);
+}
+VM2294:2 {name: 'Puma', price: 2000, qty: 10}
+VM2294:2 {name: 'Nike', price: 3000, qty: 10}
+VM2294:2 {name: 'Bata', price: 1000, qty: 20}
+VM2294:2 {name: 'Adidas', price: 12000, qty: 10}
+undefined
+for(var i = 0; i<shoes.length; i++){
+    console.log(shoes[i].name, shoes[i].price, shoes[i].qty);
+}
+VM2461:2 Puma 2000 10
+VM2461:2 Nike 3000 10
+VM2461:2 Bata 1000 20
+VM2461:2 Adidas 12000 10
+undefined
+for(var i = 0; i<shoes.length; i++){
+    console.log(shoes[i].name.toUpperCase(), shoes[i].price, shoes[i].qty);
+}
+VM2502:2 PUMA 2000 10
+VM2502:2 NIKE 3000 10
+VM2502:2 BATA 1000 20
+VM2502:2 ADIDAS 12000 10
+undefined
+for(var i = 0; i<shoes.length; i++){
+    console.log(shoes[i].name.toUpperCase(), shoes[i].price.toLocaleString('hi'), shoes[i].qty);
+}
+VM2555:2 PUMA 2,000 10
+VM2555:2 NIKE 3,000 10
+VM2555:2 BATA 1,000 20
+VM2555:2 ADIDAS 12,000 10
+undefined
+i;
+4
+window.i;
+4
+shoes;
+(4) [{…}, {…}, {…}, {…}]
+for(let shoe of shoes){
+    console.log(shoe);
+}
+VM2768:2 {name: 'Puma', price: 2000, qty: 10}
+VM2768:2 {name: 'Nike', price: 3000, qty: 10}
+VM2768:2 {name: 'Bata', price: 1000, qty: 20}
+VM2768:2 {name: 'Adidas', price: 12000, qty: 10}
+undefined
+for(let shoe of shoes){
+    console.log(shoe.name.toUpperCase(), shoe.price.toLocaleString('hi'), shoe.qty);
+}
+VM2781:2 PUMA 2,000 10
+VM2781:2 NIKE 3,000 10
+VM2781:2 BATA 1,000 20
+VM2781:2 ADIDAS 12,000 10
+undefined
+for(let shoe of shoes){
+   for(let key in shoe){
+       console.log(key);
+   }
+}
+VM2842:3 name
+VM2842:3 price
+VM2842:3 qty
+VM2842:3 name
+VM2842:3 price
+VM2842:3 qty
+VM2842:3 name
+VM2842:3 price
+VM2842:3 qty
+VM2842:3 name
+VM2842:3 price
+VM2842:3 qty
+undefined
+for(let shoe of shoes){
+   for(let key in shoe){
+       console.log(key, shoe[key]);
+   }
+}
+VM2871:3 name Puma
+VM2871:3 price 2000
+VM2871:3 qty 10
+VM2871:3 name Nike
+VM2871:3 price 3000
+VM2871:3 qty 10
+VM2871:3 name Bata
+VM2871:3 price 1000
+VM2871:3 qty 20
+VM2871:3 name Adidas
+VM2871:3 price 12000
+VM2871:3 qty 10
+undefined
+dhoni;
+{6: 400, 50: 55, 100: 11, age: 44, name: 'MS Dhoni', full address: 'New Delhi'}
+for(let key in dhoni){
+    console.log(key , dhoni[key]);
+}
+VM3025:2 6 400
+VM3025:2 50 55
+VM3025:2 100 11
+VM3025:2 age 44
+VM3025:2 name MS Dhoni
+VM3025:2 full address New Delhi
+undefined
+dhoni;
+{6: 400, 50: 55, 100: 11, age: 44, name: 'MS Dhoni', full address: 'New Delhi'}
+var x = dhoni;
+undefined
+x== dhoni;
+true
+x[6]=500;
+500
+x;
+{6: 500, 50: 55, 100: 11, age: 44, name: 'MS Dhoni', full address: 'New Delhi'}
+dhoni;
+{6: 500, 50: 55, 100: 11, age: 44, name: 'MS Dhoni', full address: 'New Delhi'}
+var prices = [90,100,88,55,66];;
+undefined
+var pricesGst = [...prices];
+undefined
+pricesGst == prices;
+false
+for(let i=0; i<pricesGst.length; i++){
+    pricesGst[i] = pricesGst[i] + pricesGst[i] * 0.18;
+}
+77.88
+pricesGst;
+(5) [106.2, 118, 103.84, 64.9, 77.88]
+prices;
+(5) [90, 100, 88, 55, 66]
+var y = {...dhoni};
+undefined
+y;
+{6: 500, 50: 55, 100: 11, age: 44, name: 'MS Dhoni', full address: 'New Delhi'}
+dhoni;
+{6: 500, 50: 55, 100: 11, age: 44, name: 'MS Dhoni', full address: 'New Delhi'}
+y[6]=600;
+600
+dhoni;
+{6: 500, 50: 55, 100: 11, age: 44, name: 'MS Dhoni', full address: 'New Delhi'}
+var x = {id:1001, name:}
+VM3651:1 Uncaught SyntaxError: Unexpected token '}'
+var x = {id:1001, name:'Amit', city:'Delhi'};
+undefined
+var y = {id:1002, pincode:7777, phone:5555};
+undefined
+var z = {...x, ...y};
+undefined
+z;
+{id: 1002, name: 'Amit', city: 'Delhi', pincode: 7777, phone: 5555}
+var t = [100,200, 300,4000];
+undefined
+var t2 = [9999,4444,2222,1111];
+undefined
+var t3 = [t, t2];
+undefined
+t3;
+(2) [Array(4), Array(4)]0: (4) [100, 200, 300, 4000]1: (4) [9999, 4444, 2222, 1111]length: 2[[Prototype]]: Array(0)
+t3[0][0];
+100
+var t3 = [...t, ...t2];
+undefined
+t3;
+(8) [100, 200, 300, 4000, 9999, 4444, 2222, 1111]
+var t3 = [...t, t2];
+undefined
+t3;
+(5) [100, 200, 300, 4000, Array(4)]
+var t = [10,20,30];
+undefined
+var t2 = [90,1000];
+undefined
+var t3 = [t, t2];
+undefined
+var t3 = [t, t2, 999, 777,333];
+undefined
+var t4 = [...t3];
+undefined
+t4;
+(5) [Array(3), Array(2), 999, 777, 333]
+for(let k=0; k<pricesGst.length; k++){
+    pricesGst[k] = pricesGst[k] + pricesGst[k] * 0.18;
+}
+91.8984
+k;
+VM4343:1 Uncaught ReferenceError: k is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM4343:1
+var g=100;
+undefined
+window.g;
+100
+this;
+Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+function show(){
+    var b4 = 100;
+}
+undefined
+show();
+undefined
+b4;
+VM4503:1 Uncaught ReferenceError: b4 is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM4503:1
+var ttt= 999;
+function show(){
+    var b4 = 100;
+}
+undefined
+show();
+
+undefined
+ttt;
+999
+var ttt= 999;
+function show(){
+    var b4 = 100;
+    tt = 888;
+}
+undefined
+show();
+undefined
+tt;
+888
+'use strict'
+'use strict'
+function show(){
+    // var h ;
+    console.log("Value is ", h);
+    if(10>2){
+        // h = 1000;
+        var h = 1000;
+    }
+     console.log("Value is:::: ", h);
+}
+undefined
+show();
+VM4763:3 Value is  undefined
+VM4763:8 Value is::::  1000
+undefined
+var b ; // Global Scope
+function show(){
+    // var h ;
+    console.log("Value is ", h);
+    if(10>2){
+        // h = 1000;
+        var h = 1000;
+    }
+     console.log("Value is:::: ", h);
+}
+undefined
+function disp(){
+    // var k ;
+    console.log("1. K is ",k);
+    var k = 100; // k = 100;
+    console.log("2. K is ",k);
+    if(10>2){
+        console.log("3. K is ",k); // k = 100
+        var k = 20; // k = 20;
+        console.log("4. K is ",k);
+    }
+    var k = 300; // k = 300;
+    console.log("5. K is ",k);
+}
+undefined
+disp();
+VM5015:3 1. K is  undefined
+VM5015:5 2. K is  100
+VM5015:7 3. K is  100
+VM5015:9 4. K is  20
+VM5015:12 5. K is  300
+undefined
+function disp(){
+    // var k ;
+    console.log("1. K is ",k);
+    let k = 100; // k = 100;
+    console.log("2. K is ",k);
+    if(10>2){
+        console.log("3. K is ",k); // k = 100
+        let k = 20; // k = 20;
+        console.log("4. K is ",k);
+    }
+    let k = 300; // k = 300;
+    console.log("5. K is ",k);
+}
+VM5050:11 Uncaught SyntaxError: Identifier 'k' has already been declared
+function disp1(){
+    console.log('K is ', k);
+    let k = 10;
+}
+undefined
+disp1();
+VM5133:2 Uncaught ReferenceError: Cannot access 'k' before initialization
+    at disp1 (<anonymous>:2:26)
+    at <anonymous>:1:1
+disp1 @ VM5133:2
+(anonymous) @ VM5155:1
+function disp1(){
+    
+    let k = 10;
+    console.log('K is ', k);
+}
+undefined
+disp1();
+VM5162:4 K is  10
+undefined
+function disp1(){
+    
+    let k = 10;
+    console.log('K is ', k);
+    let k = 20;
+}
+VM5200:5 Uncaught SyntaxError: Identifier 'k' has already been declared
+function disp(){
+    // var k ;
+    console.log("1. K is ",k); // TDZ
+    let k = 100; // k = 100;
+    console.log("2. K is ",k);
+    if(10>2){
+        console.log("3. K is ",k); // k = 100
+        let k = 20; // k = 20;
+        console.log("4. K is ",k);
+    }
+    let k = 300; // k = 300; // Redeclare 
+    console.log("5. K is ",k);
+}
+VM5230:11 Uncaught SyntaxError: Identifier 'k' has already been declared
+function disp(){
+    // var k ;
+    console.log("1. K is ",k); // TDZ
+    let k = 100; // k = 100;
+    console.log("2. K is ",k);
+    if(10>2){
+        console.log("3. K is ",k); // k = 100
+        let k = 20; // k = 20;
+        console.log("4. K is ",k);
+    }
+   // let k = 300; // k = 300; // Redeclare 
+    console.log("5. K is ",k);
+}
+undefined
+disp();
+VM5234:3 Uncaught ReferenceError: Cannot access 'k' before initialization
+    at disp (<anonymous>:3:28)
+    at <anonymous>:1:1
+disp @ VM5234:3
+(anonymous) @ VM5258:1
+function disp(){
+    // var k ;
+    //console.log("1. K is ",k); // TDZ
+    let k = 100; // k = 100;
+    console.log("2. K is ",k);
+    if(10>2){
+        console.log("3. K is ",k); // k = 100
+        let k = 20; // k = 20;
+        console.log("4. K is ",k);
+    }
+   // let k = 300; // k = 300; // Redeclare 
+    console.log("5. K is ",k);
+}
+undefined
+disp();
+VM5264:5 2. K is  100
+VM5264:7 Uncaught ReferenceError: Cannot access 'k' before initialization
+    at disp (<anonymous>:7:32)
+    at <anonymous>:1:1
+disp @ VM5264:7
+(anonymous) @ VM5285:1
+function disp(){
+    // var k ;
+    //console.log("1. K is ",k); // TDZ
+    let k = 100; // k = 100;
+    console.log("2. K is ",k);
+    if(10>2){
+        //console.log("3. K is ",k); // TDZ
+        let k = 20; // k = 20;
+        console.log("4. K is ",k);
+    }
+   // let k = 300; // k = 300; // Redeclare 
+    console.log("5. K is ",k);
+}
+undefined
+disp();
+VM5300:5 2. K is  100
+VM5300:9 4. K is  20
+VM5300:12 5. K is  100
+undefined
+function disp(){
+    // var k ;
+    //console.log("1. K is ",k); // TDZ
+    let k = 100; // k = 100;
+    console.log("2. K is ",k);
+    if(10>2){
+        console.log("3. K is ",k); // TDZ
+        let k2 = 20; // k = 20;
+        console.log("4. K is ",k2);
+    }
+   // let k = 300; // k = 300; // Redeclare 
+    console.log("5. K is ",k);
+}
+undefined
+disp();
+VM5338:5 2. K is  100
+VM5338:7 3. K is  100
+VM5338:9 4. K is  20
+VM5338:12 5. K is  100
+undefined
+function disp(){
+    // var k ;
+    console.log("1. K is ",k); 
+    var k = 100; // k = 100;
+    console.log("2. K is ",k);
+    if(10>2){
+        console.log("3. K is ",k); // TDZ
+        let k = 20; // k = 20;
+        console.log("4. K is ",k);
+    }
+   // let k = 300; // k = 300; // Redeclare 
+    console.log("5. K is ",k);
+}
+undefined
+disp();
+VM5381:3 1. K is  undefined
+VM5381:5 2. K is  100
+VM5381:7 Uncaught ReferenceError: Cannot access 'k' before initialization
+    at disp (<anonymous>:7:32)
+    at <anonymous>:1:1
+disp @ VM5381:7
+(anonymous) @ VM5402:1
+function disp(){
+    // var k ;
+    console.log("1. K is ",k); 
+    var k = 100; // k = 100;
+    console.log("2. K is ",k);
+    if(10>2){
+        console.log("3. K is ",k); // TDZ
+        let k2 = 20; // k = 20;
+        console.log("4. K is ",k2);
+    }
+   // let k = 300; // k = 300; // Redeclare 
+    console.log("5. K is ",k);
+}
+undefined
+disp();
+VM5415:3 1. K is  undefined
+VM5415:5 2. K is  100
+VM5415:7 3. K is  100
+VM5415:9 4. K is  20
+VM5415:12 5. K is  100
+undefined
+let nn = 1000;
+undefined
+window.nn;
+undefined
+let bbb;
+console.log(bbb);
+VM5568:2 undefined
+undefined
+const MAX = 100;
+undefined
+MAX++;
+VM5618:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:4
+(anonymous) @ VM5618:1
+typeof Array;
+'function'
+isNaN;
+ƒ isNaN() { [native code] }
+const M = [100,200,300,400];
+undefined
+M[0]++;
+100
+M;
+(4) [101, 200, 300, 400]
+M = [54654,756756,4432];
+VM5817:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:3
+(anonymous) @ VM5817:1
+const obj = {id:1001, name:'Amit'};
+undefined
+obj.id=999;
+999
+obj;
+{id: 999, name: 'Amit'}
+obj = {};
+VM5938:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:5
+(anonymous) @ VM5938:1
+const R = Object.freeze(M);
+undefined
+R;
+(4) [101, 200, 300, 400]
+R = [];
+VM6037:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:3
+(anonymous) @ VM6037:1
+R[0] = 555;
+555
+R;
+(4) [101, 200, 300, 400]
+M;
+(4) [101, 200, 300, 400]
+M[0] =888;
+888
+M;
+(4) [101, 200, 300, 400]
+const BB = [90,100,999];
+undefined
+BB[0] = 8888;
+8888
+BB;
+(3) [8888, 100, 999]
+BB= [65464,5455];
+VM6255:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:3
+(anonymous) @ VM6255:1
+Object.freeze(BB);
+(3) [8888, 100, 999]
+BB[0]=443434;
+443434
+BB;
+(3) [8888, 100, 999]
