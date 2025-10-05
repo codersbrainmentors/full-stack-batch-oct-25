@@ -1,0 +1,387 @@
+var a ;
+undefined
+a;
+undefined
+typeof a;
+'undefined'
+a=10;
+10
+typeof a;
+'number'
+a="Amit";
+'Amit'
+typeof a;
+'string'
+typeof(a);
+'string'
+typeof typeof;
+VM320:1 Uncaught SyntaxError: Unexpected token ';'
+typeof (((a)));
+'string'
+typeof (10*2+("Amit"));
+'string'
+var a= 1000;
+undefined
+window;
+Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+this;
+Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+this == window;
+true
+a;
+1000
+typeof a;
+'number'
+a=1;
+1
+typeof a;
+'number'
+a=11000000000000000000;
+11000000000000000000
+typeof a;
+'number'
+a=100.20;
+100.2
+typeof a;
+'number'
+a=1000;
+1000
+1000/0;
+Infinity
+var b = 1000/0;
+undefined
+b;
+Infinity
+typeof b;
+'number'
+b = "Amit" - 100;
+NaN
+typeof b;
+'number'
+ 10000 * 0.18
+1800
+ "A" * 0.18
+NaN
+isNaN("A" * 0.18)?0:"Bill Amount" 
+0
+10/0;
+Infinity
+isFinite(10/0);
+false
+window.isNaN;
+ƒ isNaN() { [native code] }
+window.isNaN("A" * 0.18)?0:"Bill Amount" ;
+0
+a=764743985749867495867895476985786975469878697589467459867845;
+7.647439857498675e+59
+a=754358475894543545;
+754358475894543500
+a=764743985749867495867895476985786975469878697589467459867845;
+7.647439857498675e+59
+a=Number.MAX_SAFE_INTEGER;
+9007199254740991
+++a;
+9007199254740992
+++a;
+9007199254740992
+++a;
+9007199254740992
+++a;
+9007199254740992
+a=764743985749867495867895476985786975469878697589467459867845n;
+764743985749867495867895476985786975469878697589467459867845n
+typeof a;
+'bigint'
+++a;
+764743985749867495867895476985786975469878697589467459867846n
+++a;
+764743985749867495867895476985786975469878697589467459867847n
+++a;
+764743985749867495867895476985786975469878697589467459867848n
+++a;
+764743985749867495867895476985786975469878697589467459867849n
+++a;
+764743985749867495867895476985786975469878697589467459867850n
+++a;
+764743985749867495867895476985786975469878697589467459867851n
+a = BigInt("7765765756756786635345346546789578347598345789");
+7765765756756786635345346546789578347598345789n
+"Amit" * 10;
+NaN
+var a = "Amit";
+undefined
+typeof a;
+'string'
+a='Amit';
+'Amit'
+typeof a;
+'string'
+a='A';
+'A'
+typeof a;
+'string'
+a = `gjdflkgjfdlkjgfljkghd
+gjdflkjgd
+hgdkjfhgkjdf`;
+'gjdflkgjfdlkjgfljkghd\ngjdflkjgd\nhgdkjfhgkjdf'
+a;
+'gjdflkgjfdlkjgfljkghd\ngjdflkjgd\nhgdkjfhgkjdf'
+console.log(a);
+VM1800:1 gjdflkgjfdlkjgfljkghd
+gjdflkjgd
+hgdkjfhgkjdf
+undefined
+a="Let's do it";
+"Let's do it"
+var b = 10;
+var d = 20;
+a=`B is ${b} and d is ${d}`;
+'B is 10 and d is 20'
+a = "B is "+b+" D is "+d;
+'B is 10 D is 20'
+"Amit " + 10
+'Amit 10'
+"Amit "+ "Srivastava"
+'Amit Srivastava'
+"Amit "- "Srivastava"
+NaN
+a = true;
+true
+typeof a;
+'boolean'
+true + true;
+2
+100 + true;
+101
+100 - true;
+99
+100 - false;
+100
+100 + undefined;
+NaN
+undefined + undefined;
+NaN
+undefined+ "";
+'undefined'
+100 + "Amit";
+'100Amit'
+typeof (undefined+ "");
+'string'
+true + "Amit"
+'trueAmit'
+100 + "100"
+'100100'
+var t = Symbol();
+undefined
+t;
+Symbol()
+typeof t;
+'symbol'
+var t2 = Symbol();
+undefined
+t == t2;
+false
+Symbol() == Symbol();
+false
+var g = null;
+undefined
+typeof g;
+'object'
+var arr = [100,200,300];
+undefined
+var arr2 = arr;
+undefined
+arr2;
+(3) [100, 200, 300]
+arr;
+(3) [100, 200, 300]
+arr2[0] = 10000;
+10000
+arr2;
+(3) [10000, 200, 300]
+arr;
+
+(3) [10000, 200, 300]
+arr == arr2;
+true
+var b = "Amit";
+undefined
+b[0] = 'R';
+'R'
+b;
+'Amit'
+b.toUpperCase();
+'AMIT'
+b;
+'Amit'
+var c = b.toUpperCase();
+undefined
+b;
+'Amit'
+c;
+'AMIT'
+arr;
+(3) [10000, 200, 300]
+typeof arr;
+'object'
+arr.length;
+3
+arr.push(10000);
+4
+arr;
+(4) [10000, 200, 300, 10000]
+arr.splice(0,1,9999);
+[10000]
+arr;
+(4) [9999, 200, 300, 10000]
+var a = 10;
+undefined
+typeof a;
+'number'
+var h = "Amit";
+undefined
+typeof h;
+'string'
+var h2 = new String("Amit");
+undefined
+typeof h2;
+'object'
+h2.toUpperCase();
+'AMIT'
+h.toUpperCase();
+'AMIT'
+typeof h;
+'string'
+arr;
+(4) [9999, 200, 300, 10000]
+typeof arr;
+'object'
+arr instanceof Array;
+true
+var h2 = new String("Amit");
+undefined
+typeof h2;
+'object'
+h2 instanceof String;
+true
+typeof String;
+'function'
+typeof Array;
+'function'
+class E{
+    
+}
+undefined
+typeof E;
+'function'
+var phone = {};
+undefined
+typeof phone;
+'object'
+phone instanceof Object;
+true
+phone instanceof Array;
+false
+phone instanceof String;
+false
+typeof Array;
+'function'
+typeof String;
+'function'
+typeof Object;
+'function'
+arr;
+(4) [9999, 200, 300, 10000]
+arr instanceof Array;
+true
+arr instanceof Object;
+true
+h2;
+String {'Amit'}
+h;
+'Amit'
+h2 instanceof String;
+true
+h2 instanceof Object;
+true
+Object instanceof Function;
+true
+h2 instanceof Object;
+true
+h2 instanceof String;
+true
+h2;
+String {'Amit'}
+typeof h2;
+'object'
+h2 instanceof Function;
+false
+typeof Object;
+'function'
+Object instanceof Function;
+true
+Function instanceof Object;
+true
+h2;'
+VM5241:1 Uncaught SyntaxError: Invalid or unexpected token
+h2;
+String {'Amit'}
+h2 instanceof String;
+true
+h2;
+String {'Amit'}0: "A"1: "m"2: "i"3: "t"length: 4[[Prototype]]: String[[PrimitiveValue]]: "Amit"
+h2.__proto__ == String.prototype;
+true
+function show(){
+    console.log("I am the show ");
+}
+undefined
+typeof show;
+'function'
+show();
+VM5449:2 I am the show 
+undefined
+var dhoni = {age: 44, name:'MS Dhoni'};
+undefined
+var g = new Array (10);
+undefined
+g;
+(10) [empty × 10]
+dhoni.age;
+44
+typeof dhoni;
+'object'
+dhoni;
+{age: 44, name: 'MS Dhoni'}
+dhoni= null;
+null
+dhoni.age;
+VM5865:1 Uncaught TypeError: Cannot read properties of null (reading 'age')
+    at <anonymous>:1:7
+(anonymous) @ VM5865:1
+typeof dhoni;
+'object'
+100 + null
+100
+undefined == null;
+true
+10=="10"
+true
+var j ;
+undefined
+var h = 100;
+undefined
+h = 200;
+200
+function show(){
+    
+}
+undefined
+var bb = 1000;
+undefined
+typeof bb;
+'number'
+bb instanceof Object;
+false
+typeof bb;
+'number'
