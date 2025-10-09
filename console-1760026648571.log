@@ -1,0 +1,102 @@
+var arr = [10,20 , 30 , 40, 50, 60]; // Box Syntax
+undefined
+for(let i of arr){
+    console.log(i);
+}
+VM145:2 10
+VM145:2 20
+VM145:2 30
+VM145:2 40
+VM145:2 50
+VM145:2 60
+undefined
+for(let i = 0; i<arr.length; i++){
+    console.log(arr[i]); 
+}
+VM272:2 10
+VM272:2 20
+VM272:2 30
+VM272:2 40
+VM272:2 50
+VM272:2 60
+undefined
+var obj = {id: 1001 , name:'Amit'};
+undefined
+typeof obj;
+'object'
+obj instanceof Object;
+true
+typeof Object;
+'function'
+obj.id;
+1001
+obj.name;
+'Amit'
+obj['id'];
+1001
+var h = new Map();
+undefined
+h;
+Map(0) {size: 0}
+h['a'] = 10;
+10
+h;
+Map(0) {a: 10, size: 0}
+m.get('a');
+VM719:1 Uncaught ReferenceError: m is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM719:1
+h.get('a');
+undefined
+h.set('a',10);
+Map(1) {'a' => 10}
+h.get('a');
+10
+obj;
+{id: 1001, name: 'Amit'}
+obj.city = 'Delhi';
+'Delhi'
+obj;
+{id: 1001, name: 'Amit', city: 'Delhi'}
+delete obj.name;
+true
+obj;
+{id: 1001, city: 'Delhi'}
+for(let k in obj){
+    console.log(k);
+}
+VM1020:2 id
+VM1020:2 city
+undefined
+for(let k in obj){
+    console.log(k, obj[k]);
+}
+VM1048:2 id 1001
+VM1048:2 city Delhi
+undefined
+arr;
+(6) [10, 20, 30, 40, 50, 60]
+for(let k in arr){
+    console.log(k);
+}
+VM1140:2 0
+VM1140:2 1
+VM1140:2 2
+VM1140:2 3
+VM1140:2 4
+VM1140:2 5
+undefined
+for(let k in arr){
+    console.log(k, arr[k]);
+}
+VM1167:2 0 10
+VM1167:2 1 20
+VM1167:2 2 30
+VM1167:2 3 40
+VM1167:2 4 50
+VM1167:2 5 60
+undefined
+10^10
+0
+2**5
+32

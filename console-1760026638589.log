@@ -1,0 +1,34 @@
+function add(){
+    return 10,20;
+}
+undefined
+add();
+20
+function add(){
+    return 10,20,30;
+}
+undefined
+add();
+30
+var a = 10;
+undefined
+var b = 20;
+undefined
+var obj = {a,b}; // Object ShortHand
+undefined
+obj;
+{a: 10, b: 20}
+obj.ad;
+undefined
+obj.a;
+10
+obj.b;
+20
+var g;
+undefined
+h;
+VM327:1 Uncaught ReferenceError: h is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM327:1
+g;
+undefined

@@ -1,0 +1,511 @@
+function show(){
+    console.log("I am the named function");
+}
+undefined
+show();
+VM136:2 I am the named function
+undefined
+show();
+VM136:2 I am the named function
+undefined
+var r = function(){
+    console.log("Iam the Anonymous Function / Function Expression");
+}
+undefined
+r();
+VM321:2 Iam the Anonymous Function / Function Expression
+undefined
+typeof r;
+'function'
+function Calc(){
+    var add = function(x,y){
+        return x + y;
+    }
+    var sub = function(x,y){
+        return x - y;
+    }
+    return add, sub;
+}
+var fn = Calc(); // Call Stack
+undefined
+fn;
+ƒ (x,y){
+        return x - y;
+    }
+fn(10,20);
+-10
+function Calc(){
+    var add = function(x,y){
+        return x + y;
+    }
+    var sub = function(x,y){
+        return x - y;
+    }
+    return [add, sub];
+}
+var fn = Calc(); // Call Stack
+undefined
+fn;
+(2) [ƒ, ƒ]0: ƒ (x,y)1: ƒ (x,y)length: 2[[Prototype]]: Array(0)
+fn[0](10,20);
+30
+fn[1](10,20);
+-10
+fn;
+(2) [ƒ, ƒ]0: ƒ (x,y)1: ƒ (x,y)length: 2[[Prototype]]: Array(0)
+function Calc(){
+    // NFE
+    var add = function adder(x,y){
+        return x + y;
+    }
+    var sub = function subtraction(x,y){
+        return x - y;
+    }
+    return [add, sub];
+}
+var fn = Calc(); // Call Stack
+undefined
+fn;
+(2) [ƒ, ƒ]0: ƒ adder(x,y)1: ƒ subtraction(x,y)length: 2[[Prototype]]: Array(0)at: ƒ at()concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()findLast: ƒ findLast()findLastIndex: ƒ findLastIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toReversed: ƒ toReversed()toSorted: ƒ toSorted()toSpliced: ƒ toSpliced()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()with: ƒ with()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {at: true, copyWithin: true, entries: true, fill: true, find: true, …}[[Prototype]]: Object
+x[0](10,20);
+VM747:1 Uncaught ReferenceError: x is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM747:1
+fn[0](10,20);
+30
+function Calc(){
+    // NFE
+    var add = function adder(x,y){
+        return x + y;
+    }
+    var sub = function subtraction(x,y){
+        return x - y;
+    }
+    return {"adding":add,"sub":sub};
+}
+var fn = Calc(); // Call Stack
+undefined
+fn;
+{adding: ƒ, sub: ƒ}
+fn.adding(10,20);
+30
+function Calc(){
+    // NFE
+    var add = function adder(x,y){
+        return x + y;
+    }
+    var sub = function subtraction(x,y){
+        return x - y;
+    }
+    return {add, sub};
+}
+var fn = Calc(); // Call Stack
+undefined
+fn.add(10,20)
+30
+fn.sub(10,20);
+-10
+fn.sub(10);
+NaN
+fn.add()
+NaN
+function Calc(){
+    // NFE
+    var add = function adder(x,y){
+        console.log('x is ',x ' Y is ', y);
+        return x + y;
+    }
+    var sub = function subtraction(x,y){
+        return x - y;
+    }
+    return {add, sub};
+}
+var fn = Calc(); // Call Stack
+VM1121:4 Uncaught SyntaxError: missing ) after argument list
+function Calc(){
+    // NFE
+    var add = function adder(x,y){
+        console.log('X is '+x+' Y is '+y);
+        console.log('x is ',x ,' Y is ', y);
+        return x + y;
+    }
+    var sub = function subtraction(x,y){
+        return x - y;
+    }
+    return {add, sub};
+}
+var fn = Calc(); // Call Stack
+undefined
+fn.add();
+VM1179:4 X is undefined Y is undefined
+VM1179:5 x is  undefined  Y is  undefined
+NaN
+undefined + undefined;
+NaN
+fn.add(100);
+VM1179:4 X is 100 Y is undefined
+VM1179:5 x is  100  Y is  undefined
+NaN
+100 + undefined;
+NaN
+undefined + undefined;
+NaN
+function Calc(){
+    // NFE
+    var add = function adder(x,y){
+        x = x || 0;
+        y = y || 0;
+        console.log('X is '+x+' Y is '+y);
+        console.log('x is ',x ,' Y is ', y);
+        return x + y;
+    }
+    var sub = function subtraction(x,y){
+        return x - y;
+    }
+    return {add, sub};
+}
+var fn = Calc(); // Call Stack
+undefined
+fn.add(10,20);
+VM1403:6 X is 10 Y is 20
+VM1403:7 x is  10  Y is  20
+30
+fn.add(10);
+VM1403:6 X is 10 Y is 0
+VM1403:7 x is  10  Y is  0
+10
+fn.add();
+VM1403:6 X is 0 Y is 0
+VM1403:7 x is  0  Y is  0
+0
+function Calc(){
+    // NFE
+    var add = function adder(x=0,y=0){
+        // x = x || 0;
+        // y = y || 0;
+        console.log('X is '+x+' Y is '+y);
+        console.log('x is ',x ,' Y is ', y);
+        return x + y;
+    }
+    var sub = function subtraction(x,y){
+        return x - y;
+    }
+    return {add, sub};
+}
+var fn = Calc(); // Call Stack
+undefined
+fn.add();
+VM1491:6 X is 0 Y is 0
+VM1491:7 x is  0  Y is  0
+0
+fn.add(10);
+VM1491:6 X is 10 Y is 0
+VM1491:7 x is  10  Y is  0
+10
+fn.add(10,20);
+VM1491:6 X is 10 Y is 20
+VM1491:7 x is  10  Y is  20
+30
+function show(...a){
+    console.log(a);
+}
+undefined
+show(10,20,30,40,50);
+VM1595:2 (5) [10, 20, 30, 40, 50]0: 101: 202: 303: 404: 50length: 5[[Prototype]]: Array(0)
+undefined
+console.dir(show);
+VM1715:1 ƒ show(...a)length: 0name: "show"prototype: {}arguments: nullcaller: null[[FunctionLocation]]: VM1595:1[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]
+undefined
+function show(x,y , ...a){
+    console.log(a);
+}
+undefined
+function show(x,y , ...a){
+    console.log(x, y , a);
+}
+undefined
+show(10,20);
+VM1749:2 10 20 []
+undefined
+show(10,20, 90,100);
+VM1749:2 10 20 (2) [90, 100]
+undefined
+console.log("Hello", 10, true, [90,100]);
+VM1977:1 Hello 10 true (2) [90, 100]
+undefined
+function show(x,y , ...a, ...b){
+    console.log(x, y , a, b);
+}
+VM2003:1 Uncaught SyntaxError: Rest parameter must be last formal parameter
+function show(...q, x,y ){
+    console.log(x, y , a, b);
+}
+VM2018:1 Uncaught SyntaxError: Rest parameter must be last formal parameter
+function show(...a){
+    console.log(a);
+}
+undefined
+show(10,20,"Amit", 90, true);
+VM2056:2 (5) [10, 20, 'Amit', 90, true]
+undefined
+function gst(...prices){
+    var sum = 0;
+    for(let price of prices){
+        sum = sum + price * 0.18;
+    }
+    return sum;
+}
+undefined
+gst(100,200,300,400,66,88);
+207.72
+var gg = [10,20,30,40,50];
+undefined
+var g1 = gg[0];
+undefined
+g1;
+10
+var[a,b]= gg;
+undefined
+a;
+10
+b;
+20
+var[a,,,b]= gg;
+undefined
+a;
+10
+b;
+40
+var [x,y] =[10,20];
+undefined
+x;
+10
+y;
+20
+[x,y] = [y,x];
+(2) [20, 10]
+var obj = {id: 1001 , name:'Amit', city:'Delhi', phone:22222};
+undefined
+var t = obj.id;
+undefined
+var {name, city} = obj;
+undefined
+name;
+'Amit'
+city;
+'Delhi'
+function show(obj){
+    console.log('Name is '
+}
+VM2860:2 Uncaught SyntaxError: missing ) after argument list
+function show(obj){
+    console.log('Name is ', obj.name, 'City is ', obj.city);
+}
+undefined
+show(obj);
+VM2939:2 Name is  Amit City is  Delhi
+undefined
+function show({name, city}){
+    console.log('Name is ', obj.name, 'City is ', obj.city);
+}
+undefined
+show(obj);
+VM2984:2 Name is  Amit City is  Delhi
+undefined
+var arr = [10,20,30,40,50];
+undefined
+var g = [...arr];
+undefined
+g;
+(5) [10, 20, 30, 40, 50]
+arr;
+(5) [10, 20, 30, 40, 50]
+g == arr;
+false
+function Calc(a,b){
+    var c = 100;
+    var d = 200;
+    // lexical scope
+    // NFE
+    var add = function (x=0,y=0){
+        // function local scope
+        // x = x || 0;
+        // y = y || 0;
+        console.log('X is '+x+' Y is '+y);
+        console.log('x is ',x ,' Y is ', y);
+        return x + y + a;
+    }
+    var sub = function (x,y){
+        return x - y - b;
+    }
+    return {add, sub};
+}
+var fn = Calc();
+undefined
+function Calc(a,b){
+    var c = 100;
+    var d = 200;
+    // lexical scope
+    // NFE
+    var add = function (x=0,y=0){
+        // function local scope
+        // x = x || 0;
+        // y = y || 0;
+        console.log('X is '+x+' Y is '+y);
+        console.log('x is ',x ,' Y is ', y);
+        return x + y + a;
+    }
+    var sub = function (x,y){
+        return x - y - b;
+    }
+    return {add, sub};
+}
+var fn = Calc(1000,2000);
+undefined
+fn.add(1,2);
+VM3301:10 X is 1 Y is 2
+VM3301:11 x is  1  Y is  2
+1003
+fn.sub(1,2);
+-2001
+console.dir(fn.add);
+VM3464:1 ƒ add(x=0,y=0)length: 0name: "add"prototype: {}arguments: nullcaller: null[[FunctionLocation]]: VM3301:6[[Prototype]]: ƒ ()[[Scopes]]: Scopes[2]0: Closure (Calc) {b: 2000, a: 1000}1: Global {window: Window, self: Window, document: document, name: 'Amit', location: Location, …}
+undefined
+function counter(){
+    var count = 0;
+    count++;
+    return count;
+}
+undefined
+counter();
+1
+counter();
+1
+counter();
+1
+var count = 0;
+function counter(){
+    
+    count++;
+    return count;
+}
+undefined
+counter();
+1
+counter();
+2
+counter();
+3
+counter();
+4
+count ="Amit";
+'Amit'
+counter();
+NaN
+function init(){
+    var c = 0;
+    return function countIt(){
+        c++;
+        return c;
+    }
+}
+undefined
+var fn = init();
+undefined
+fn();
+1
+fn();
+2
+fn();
+3
+fn();
+4
+c ;
+VM3782:1 Uncaught ReferenceError: c is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM3782:1
+function show(x, y){
+    return x + y;
+}
+undefined
+const show = ()=>x+y;
+VM3943:1 Uncaught SyntaxError: Identifier 'show' has already been declared
+const show1 = ()=>x+y;
+undefined
+typeof show1;
+'function'
+const show1 = (x,y)=>x+y;
+undefined
+show1(10,20);
+30
+const show1 = (x,y)=>{
+    return x+y;
+}
+undefined
+show1(10,20);
+30
+const show1 = x=>{
+    return x*x;
+}
+undefined
+show1(100);
+10000
+const show1 = ()=>{
+    return "Iam the show1";
+}
+undefined
+show1();
+'Iam the show1'
+const show1 = (x,y)=>{
+    console.log(arguments);
+    return x+y;
+}
+undefined
+show1();
+VM4305:2 Uncaught ReferenceError: arguments is not defined
+    at show1 (<anonymous>:2:17)
+    at <anonymous>:1:1
+show1 @ VM4305:2
+(anonymous) @ VM4328:1
+const show1 = (...a)=>{
+    console.log(a);
+    
+}
+undefined
+show1(10,20);
+VM4352:2 (2) [10, 20]
+undefined
+show;
+ƒ show(x, y){
+    return x + y;
+}
+show(10,20);
+30
+var x = new show(10,20);
+undefined
+var g = new show1(10,20);
+VM4559:1 Uncaught TypeError: show1 is not a constructor
+    at <anonymous>:1:9
+(anonymous) @ VM4559:1
+function show(){
+    console.log('this is ', this);
+}
+undefined
+var x = new show();
+VM4665:2 this is  show {}
+undefined
+show();
+VM4665:2 this is  Window {window: Window, self: Window, document: document, name: 'Amit', location: Location, …}
+undefined
+window.show();
+VM4665:2 this is  Window {window: Window, self: Window, document: document, name: 'Amit', location: Location, …}
+undefined
+const show1 = ()=>console.log('this is ',this);
+undefined
+var e = new show1();
+VM4987:1 Uncaught TypeError: show1 is not a constructor
+    at <anonymous>:1:9
+(anonymous) @ VM4987:1
+show1();
+VM4943:1 this is  Window {window: Window, self: Window, document: document, name: 'Amit', location: Location, …}
+undefined
