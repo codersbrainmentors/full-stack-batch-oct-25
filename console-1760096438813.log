@@ -1,0 +1,44 @@
+function orderPizza(fn){
+    console.log('order booked ');
+    console.log('Preparing Meal ');
+    console.log('Done');
+    fn();
+}
+function outForDel(){
+    console.log("Out for Del ");
+}
+orderPizza(outForDel);
+VM341:2 order booked 
+VM341:3 Preparing Meal 
+VM341:4 Done
+VM341:8 Out for Del 
+undefined
+function orderPizza(fn){
+    console.log('order booked ');
+    console.log('Preparing Meal ');
+    console.log('Done');
+    fn("5:00PM");
+}
+function outForDel(time){
+    console.log("Out for Del ", time);
+}
+orderPizza(outForDel);
+VM389:2 order booked 
+VM389:3 Preparing Meal 
+VM389:4 Done
+VM389:8 Out for Del  5:00PM
+undefined
+function forEach(callBackFn){
+    var arr = [10,20,30,40];
+    for(let i of arr){
+        callBackFn(i);
+    }
+}
+forEach(function(e){
+    console.log(e);
+});
+VM628:8 10
+VM628:8 20
+VM628:8 30
+VM628:8 40
+undefined

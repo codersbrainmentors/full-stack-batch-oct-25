@@ -1,0 +1,32 @@
+var arr = [10,20 , 30 , 40, 50, 60]; // Box Syntax
+undefined
+arr.forEach(function(e){
+    console.log(e);
+});
+VM124:2 10
+VM124:2 20
+VM124:2 30
+VM124:2 40
+VM124:2 50
+VM124:2 60
+undefined
+arr.forEach(function(e, i){
+    console.log(e, i);
+});
+VM143:2 10 0
+VM143:2 20 1
+VM143:2 30 2
+VM143:2 40 3
+VM143:2 50 4
+VM143:2 60 5
+undefined
+arr.forEach(function(e, i, a){
+    console.log(e, i, a);
+});
+VM161:2 10 0 (6) [10, 20, 30, 40, 50, 60]
+VM161:2 20 1 (6) [10, 20, 30, 40, 50, 60]
+VM161:2 30 2 (6) [10, 20, 30, 40, 50, 60]
+VM161:2 40 3 (6) [10, 20, 30, 40, 50, 60]
+VM161:2 50 4 (6) [10, 20, 30, 40, 50, 60]
+VM161:2 60 5 (6) [10, 20, 30, 40, 50, 60]
+undefined

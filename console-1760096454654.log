@@ -1,0 +1,72 @@
+var a = 100;
+undefined
+var b = new Number(a);
+undefined
+b;
+Number {100}
+typeof b;
+'object'
+typeof a;
+'number'
+b.toString();
+'100'
+b.toLocaleString('hi');
+'100'
+a = 10000000;
+10000000
+var b = new Number(a);
+undefined
+b.toLocaleString('hi');
+'1,00,00,000'
+var b = new Number(1000.200);
+undefined
+b.toFixed();
+'1000'
+b.toFixed(1);
+'1000.2'
+b.toFixed(2);
+'1000.20'
+var c = b;
+undefined
+c;
+Number {1000.2}
+b;
+Number {1000.2}
+var e = b+5;
+undefined
+e;
+1005.2
+var gg = 100000;
+undefined
+typeof gg;
+'number'
+gg.toLocaleString('hi');
+'1,00,000'
+gg;
+100000
+function show(){
+    var x =10, y=20,z=30;
+    return function disp(t){
+        return t + x + y;
+    }
+}
+var fn = show();
+undefined
+fn;
+ƒ disp(t){
+        return t + x + y;
+    }
+fn(100);
+130
+fn.x;
+undefined
+fn.y;
+undefined
+x;
+VM971:1 Uncaught ReferenceError: x is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM971:1
+y;
+VM981:1 Uncaught ReferenceError: y is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM981:1

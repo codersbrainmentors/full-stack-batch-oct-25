@@ -1,0 +1,102 @@
+var obj = {
+    arr:[10,20,30,40, 99, 55, 11, 100],
+    even:[],
+    odd:[],
+    evenOdd(){
+        //console.log(this.arr);
+        this.arr.forEach(function(e){
+           if(e%2==0){
+               this.even.push(e);
+           } 
+            else{
+                this.odd.push(e);
+            }
+        });
+    }
+    
+} 
+obj.evenOdd();
+
+VM519:9 Uncaught TypeError: Cannot read properties of undefined (reading 'push')
+    at <anonymous>:9:26
+    at Array.forEach (<anonymous>)
+    at Object.evenOdd (<anonymous>:7:18)
+    at <anonymous>:18:5
+(anonymous) @ VM519:9
+evenOdd @ VM519:7
+(anonymous) @ VM519:18
+var obj = {
+    arr:[10,20,30,40, 99, 55, 11, 100],
+    even:[],
+    odd:[],
+    evenOdd(){
+        var that = this;
+        //console.log(this.arr);
+        this.arr.forEach(function(e){
+           if(e%2==0){
+               that.even.push(e);
+           } 
+            else{
+                that.odd.push(e);
+            }
+        });
+    }
+    
+} 
+obj.evenOdd();
+
+undefined
+obj.even;
+(5) [10, 20, 30, 40, 100]
+obj.odd;
+(3) [99, 55, 11]
+var obj = {
+    arr:[10,20,30,40, 99, 55, 11, 100],
+    even:[],
+    odd:[],
+    evenOdd(){
+       
+        //console.log(this.arr);
+        this.arr.forEach((e)=>{
+           if(e%2==0){
+               this.even.push(e);
+           } 
+            else{
+                this.odd.push(e);
+            }
+        });
+    }
+    
+} 
+obj.evenOdd();
+
+undefined
+obj.even = [];
+[]
+obj.odd = [];
+[]
+var obj = {
+    arr:[10,20,30,40, 99, 55, 11, 100],
+    even:[],
+    odd:[],
+    evenOdd(){
+       
+        //console.log(this.arr);
+        this.arr.forEach((e)=>{
+           if(e%2==0){
+               this.even.push(e);
+           } 
+            else{
+                this.odd.push(e);
+            }
+        });
+    }
+    
+} 
+obj.evenOdd();
+
+undefined
+obj.even;
+(5) [10, 20, 30, 40, 100]
+obj.odd;
+(3) [99, 55, 11]

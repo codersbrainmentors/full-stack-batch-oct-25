@@ -1,0 +1,252 @@
+// Array functions
+undefined
+var arr = [10,20,30,90,10,20,10];
+undefined
+var b  = new Array(10);
+undefined
+b;
+(10) [empty × 10]
+var c  = new Array(10,20,30);
+undefined
+c;
+(3) [10, 20, 30]
+typeof arr;
+'object'
+arr instanceof Array;
+true
+arr.push(1000);
+8
+arr;
+(8) [10, 20, 30, 90, 10, 20, 10, 1000]
+arr.pop();
+1000
+arr;
+(7) [10, 20, 30, 90, 10, 20, 10]
+arr.unshift(1003);
+8
+arr;
+(8) [1003, 10, 20, 30, 90, 10, 20, 10]
+arr.shift();
+1003
+arr;
+(7) [10, 20, 30, 90, 10, 20, 10]
+arr.splice(1,1);
+[20]
+arr;
+(6) [10, 30, 90, 10, 20, 10]
+arr.splice(1,3);
+(3) [30, 90, 10]
+arr;
+(3) [10, 20, 10]
+arr.splice(0);
+(3) [10, 20, 10]
+arr;
+[]
+var arr = [10,20 , 30 , 40, 50, 60]; // Box Syntax
+undefined
+arr.splice(1,0,888);
+[]
+arr;
+(7) [10, 888, 20, 30, 40, 50, 60]
+arr.splice(1, 0,1000,2000,3000);
+[]
+arr;
+(10) [10, 1000, 2000, 3000, 888, 20, 30, 40, 50, 60]
+arr.splice(1,1,6666);
+[1000]
+arr;
+(10) [10, 6666, 2000, 3000, 888, 20, 30, 40, 50, 60]
+Array.prototype.push;
+ƒ push() { [native code] }
+typeof Array;
+'function'
+typeoof Array.prototype;
+VM1240:1 Uncaught SyntaxError: Unexpected identifier 'Array'
+typeof Array.prototype;
+'object'
+arr;
+(10) [10, 6666, 2000, 3000, 888, 20, 30, 40, 50, 60]
+arr.insert
+undefined
+Array.prototype.insert= function(index, value){
+    this.splice(index, 0, value);
+    return this.length;
+}
+ƒ (index, value){
+    this.splice(index, 0, value);
+    return this.length;
+}
+arr.insert(2, 888888);
+11
+arr;
+(11) [10, 6666, 888888, 2000, 3000, 888, 20, 30, 40, 50, 60]
+arr.find(function(e){
+    return e ==30;
+});
+30
+arr.find(function(e){
+    return e ==30000;
+});
+undefined
+arr.find((e)=>e ==30000);
+undefined
+arr.find((e)=>e ==30);
+30
+arr.findIndex((e)=>e ==30);
+7
+arr.findIndex((e)=>e ==30000);
+-1
+arr;
+(11) [10, 6666, 888888, 2000, 3000, 888, 20, 30, 40, 50, 60]
+arr.filter(e=>e>800);
+(5) [6666, 888888, 2000, 3000, 888]
+arr.lastIndexOf(e=>e==30);
+-1
+arr;
+(11) [10, 6666, 888888, 2000, 3000, 888, 20, 30, 40, 50, 60]
+arr.push(30), 100000, 7777);
+VM2064:1 Uncaught SyntaxError: Unexpected token ')'
+arr.push(30, 100000, 7777);
+14
+arr;
+(14) [10, 6666, 888888, 2000, 3000, 888, 20, 30, 40, 50, 60, 30, 100000, 7777]
+arr.lastIndexOf(e=>e==30);
+-1
+arr.lastIndexOf(30);
+11
+arr.findLastIndex(e=>e==30);
+11
+arr.findLastIndex(e=>e>30);
+13
+arr.filter(e=>e>800).length;
+7
+var gg = arr.map(e=>e*10);
+undefined
+gg;
+(14) [100, 66660, 8888880, 20000, 30000, 8880, 200, 300, 400, 500, 600, 300, 1000000, 77770]
+arr;
+(14) [10, 6666, 888888, 2000, 3000, 888, 20, 30, 40, 50, 60, 30, 100000, 7777]
+var prices = [1000, 2000, 4300, 55555];
+undefined
+prices.map(e=>`<p>${e.toLocaleString('hi')}</p>`)
+(4) ['<p>1,000</p>', '<p>2,000</p>', '<p>4,300</p>', '<p>55,555</p>']
+prices;
+(4) [1000, 2000, 4300, 55555]
+prices.sort((a,b)=>a-b)
+(4) [1000, 2000, 4300, 55555]
+prices.unshift(100000);
+5
+prices;
+(5) [100000, 1000, 2000, 4300, 55555]
+prices.sort((a,b)=>a-b)
+(5) [1000, 2000, 4300, 55555, 100000]
+prices.sort((a,b)=>b-a)
+(5) [100000, 55555, 4300, 2000, 1000]
+var names = ["ram", "shyam","amit"];
+undefined
+"ram".localeCompare("amit");
+1
+"amit".localeCompare("ram");
+-1
+"amit".localeCompare("amit");
+0
+names.sort((a,b)=>a.localeCompare(b));
+(3) ['amit', 'ram', 'shyam']
+names.sort((a,b)=>b.localeCompare(a));
+(3) ['shyam', 'ram', 'amit']
+prices;
+(5) [100000, 55555, 4300, 2000, 1000]
+prices.reduce((sum, price)=>{
+    console.log('Sum is ', sum , ' Price is ' , price);
+    return sum + price;
+},0)
+VM3377:2 Sum is  0  Price is  100000
+VM3377:2 Sum is  100000  Price is  55555
+VM3377:2 Sum is  155555  Price is  4300
+VM3377:2 Sum is  159855  Price is  2000
+VM3377:2 Sum is  161855  Price is  1000
+162855
+prices.reduce((sum, price)=>{
+    console.log('Sum is ', sum , ' Price is ' , price);
+    return sum + price;
+})
+VM3387:2 Sum is  100000  Price is  55555
+VM3387:2 Sum is  155555  Price is  4300
+VM3387:2 Sum is  159855  Price is  2000
+VM3387:2 Sum is  161855  Price is  1000
+162855
+prices.some(e=>e>1);
+true
+prices;
+(5) [100000, 55555, 4300, 2000, 1000]
+prices.some(e=>e>2000);
+true
+prices.every(e=>e>2000);
+false
+prices.every(e=>e>2);
+true
+// Problem: Double every number, then keep only evens.
+undefined
+var x =[10,90,2 , 5, 7, 100, 33];
+undefined
+x.map(e=>e*e).filter(y=>y%2==0);
+(4) [100, 8100, 4, 10000]
+// Problem: Sum only evens (filter + reduce).
+
+undefined
+arr;
+(14) [10, 6666, 888888, 2000, 3000, 888, 20, 30, 40, 50, 60, 30, 100000, 7777]
+arr.reduce((max, e)=>{
+    if(e>max){
+        max = e;
+    }
+    return max;
+});
+888888
+arr;
+(14) [10, 6666, 888888, 2000, 3000, 888, 20, 30, 40, 50, 60, 30, 100000, 7777]
+arr.map(e=>e>7000);
+(14) [false, false, true, false, false, false, false, false, false, false, false, false, true, true]
+arr.reduce((acc,e)=>{
+    if(e>7000){
+        acc.push(e);
+    }
+    return acc;
+},[]);
+(3) [888888, 100000, 7777]
+arr;
+(14) [10, 6666, 888888, 2000, 3000, 888, 20, 30, 40, 50, 60, 30, 100000, 7777]
+arr.reduce((acc,e)=>{
+    if(e<7000){
+        acc.push(e);
+    }
+    return acc;
+},[]);
+(11) [10, 6666, 2000, 3000, 888, 20, 30, 40, 50, 60, 30]
+arr;
+(14) [10, 6666, 888888, 2000, 3000, 888, 20, 30, 40, 50, 60, 30, 100000, 7777]
+arr = arr.reduce((acc,e)=>{
+    if(e<7000){
+        acc.push(e);
+    }
+    return acc;
+},[]);
+(11) [10, 6666, 2000, 3000, 888, 20, 30, 40, 50, 60, 30]
+arr;
+(11) [10, 6666, 2000, 3000, 888, 20, 30, 40, 50, 60, 30]
+arr = arr.filter(e=>e<2000);
+(8) [10, 888, 20, 30, 40, 50, 60, 30]
+arr;
+(8) [10, 888, 20, 30, 40, 50, 60, 30]
+var h = arr.map(e=>e);
+undefined
+h == arr;
+false
+h;
+(8) [10, 888, 20, 30, 40, 50, 60, 30]
+arr;
+(8) [10, 888, 20, 30, 40, 50, 60, 30]
+var h = arr.filter(e=>true);
+undefined
+h;
+(8) [10, 888, 20, 30, 40, 50, 60, 30]
