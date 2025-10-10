@@ -1,0 +1,28 @@
+Question - 1 [[1,2],[3,4],[5]] → [1,2,3,4,5] , with out using flat
+
+Question - 2 Count occurrences of each word in array. 
+e.g  words = ['hi','hello','hi','hey'];
+
+Question -3  Sum only evens e.g nums = [10,11,12,13,14];
+
+Question - 4 Names  UPPERCASE only whose length > 4.
+eg. names = ['amit','shyam','tim','tom'];
+
+Question - 5 find first failing student 
+ e.g students = [{name:'A',marks:80},{name:'B',marks:35},{name:'C',marks:60}];
+
+Question-6 Compute average age e.g users = [{age:20},{age:30},{age:40}];
+
+Question - 7 Check all orders delieverd e.g orders = [
+  {id:1,status:'delivered'},
+  {id:2,status:'pending'},
+  {id:3,status:'delivered'}
+];
+
+Question - 8 Top 2 Products by sales
+const sales = [{p:'A',sold:10},{p:'B',sold:50},{p:'C',sold:30}];
+
+Question - 9 Filter Palindrome
+e.g  words = ['level','car','madam','noon','node'];
+
+Question - 10 find out the ways to copy object 
