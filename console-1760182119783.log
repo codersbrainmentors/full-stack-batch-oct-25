@@ -1,0 +1,267 @@
+function a(x,y){
+    console.log("I am the a function ");
+    return function b(){
+        console.log("I am the b function ");
+        return x * y;
+    }
+}
+undefined
+var t = a(10,20)
+VM187:2 I am the a function 
+undefined
+t;
+ƒ b(){
+        console.log("I am the b function ");
+        return x * y;
+    }
+console.dir(t);
+VM292:1 ƒ b()length: 0name: "b"prototype: {}arguments: nullcaller: null[[FunctionLocation]]: VM187:3[[Prototype]]: ƒ ()[[Scopes]]: Scopes[2]0: Closure (a) {y: 20, x: 10}1: Global {window: Window, self: Window, document: document, name: '', location: Location, …}
+undefined
+x;
+VM299:1 Uncaught ReferenceError: x is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM299:1
+y;
+VM309:1 Uncaught ReferenceError: y is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM309:1
+t();
+VM187:4 I am the b function 
+200
+a(10,20)();
+VM187:2 I am the a function 
+VM187:4 I am the b function 
+200
+// Advance Functional Programming
+undefined
+// Closure
+undefined
+// Memoization
+undefined
+function cube(num){
+    // complex logic
+    for(i = 1; i<1e+9; i++){
+        
+    }
+    return num**3;
+}
+undefined
+cube(3);
+27
+cube(5);
+125
+cube(5);
+125
+cube(3);
+27
+const cache = {};
+function cube(num){
+    // already in cache so get from cache
+    if(cache[num]){
+        return cache[num];
+    }
+    // if not in cache so process it
+    // complex logic
+    for(i = 1; i<1e+9; i++){
+        
+    }
+    cache[num] = num **3;
+    return cache[num];
+}
+undefined
+cube(3);
+27
+cube(3);
+27
+cache;
+{3: 27}
+cube(3);
+27
+cube(5);
+125
+cube(5);
+125
+cache;
+{3: 27, 5: 125}
+// IIFE
+undefined
+(function(){
+    console.log("IIFE ");
+})()
+VM972:2 IIFE 
+undefined
+// To create private scope + For initialization code + Modules
+undefined
+const computeModule = (function(x,y){
+    var z = 1;
+    const add = ()=>{
+        return x + y + z;
+    },
+    const subtract = ()=>{
+        return x - y - z;
+    }  
+    return {add, subtract};
+})();
+VM1251:6 Uncaught SyntaxError: Unexpected token 'const'
+const computeModule = (function(x,y){
+    var z = 1;
+    const add = ()=>{
+        return x + y + z;
+    }
+    const subtract = ()=>{
+        return x - y - z;
+    }  
+    return {add, subtract};
+})();
+undefined
+computeModule;
+{add: ƒ, subtract: ƒ}
+computeModule.add();
+NaN
+const computeModule = (function(x,y){
+    var z = 1;
+    const add = ()=>{
+        return x + y + z;
+    }
+    const subtract = ()=>{
+        return x - y - z;
+    }  
+    return {add, subtract};
+})(10,20);
+undefined
+computeModule.add();
+31
+computeModule.subtract();
+-11
+const TriMath = (function(deg){
+    const sin = ()=>{
+    }
+    const cos = ()=>{
+    }
+    const tan = ()=>{
+        
+    }
+    return {sin, cos, tan};
+})();
+undefined
+TriMath;
+{sin: ƒ, cos: ƒ, tan: ƒ}
+TriMath.sin();
+undefined
+// callback hell
+undefined
+var arr = [10,20 , 30 , 40, 50, 60]; // Box Syntax
+undefined
+arr.forEach(e=>console.log(e));
+VM1833:1 10
+VM1833:1 20
+VM1833:1 30
+VM1833:1 40
+VM1833:1 50
+VM1833:1 60
+undefined
+// currying
+undefined
+function (callback, callback2, callback3){
+    
+}
+VM1985:1 Uncaught SyntaxError: Function statements require a function name
+function show (callback, callback2, callback3){
+    
+}
+undefined
+function outer(a){
+    return function (b){
+        return function(c){
+            return function3(d){
+                return a+ b + c + d;
+            }
+        }
+    }
+}
+VM2118:4 Uncaught SyntaxError: Unexpected token '{'
+function outer(a){
+    return function (b){
+        return function(c){
+            return function(d){
+                return a+ b + c + d;
+            }
+        }
+    }
+}
+undefined
+outer(10)(20)(30)(40);
+100
+function orderBook(orderId){
+    return function(paymentId){
+        return function(delId){
+            return orderId + " "+paymentId + " " + delId;
+        }
+    } 
+}
+undefined
+orderBook(10)(1001)(1);
+'10 1001 1'
+// iife let mimic
+undefined
+function disp(){
+    (function(){
+    for(var i = 1; i<=10; i++){
+    }
+    })();
+    
+console.log('I is ', i);
+}
+undefined
+disp();
+VM2613:7 I is  1000000000
+undefined
+function disp(){
+    (function(){
+    for(var k = 1; k<=10; k++){
+    }
+    })();
+    
+console.log('K is ', k);
+}
+undefined
+disp();
+VM2660:7 Uncaught ReferenceError: k is not defined
+    at disp (<anonymous>:7:22)
+    at <anonymous>:1:1
+disp @ VM2660:7
+(anonymous) @ VM2680:1
+const e = (x,y)=>{
+    return x + y;
+}
+undefined
+e(10,20);
+30
+const e = (x)=>{
+    return [...x, 10]
+}
+undefined
+e();
+VM2806:2 Uncaught TypeError: x is not iterable
+    at e (<anonymous>:2:16)
+    at <anonymous>:1:1
+e @ VM2806:2
+(anonymous) @ VM2820:1
+e(20,30);
+VM2806:2 Uncaught TypeError: x is not iterable
+    at e (<anonymous>:2:16)
+    at <anonymous>:1:1
+e @ VM2806:2
+(anonymous) @ VM2848:1
+e([20,30]);
+(3) [20, 30, 10]
+const e = (...x)=>{
+    return [...x, 10]
+}
+undefined
+e(90,100);
+(3) [90, 100, 10]
+eval("10+2*3");
+16
+eval("alert('Hi JS ')");
+undefined

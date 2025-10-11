@@ -1,0 +1,143 @@
+const orders = [
+  { id: 1, user: { name: 'Alice', age: 25 }, total: 100, status: 'completed' },
+  { id: 2, user: { name: 'Bob', age: 30 }, total: 50, status: 'pending' },
+  { id: 3, user: { name: 'Charlie', age: 35 }, total: 200, status: 'completed' },
+  { id: 4, user: { name: 'David', age: 28 }, total: 150, status: 'completed' }
+];
+undefined
+orders[0].id
+1
+orders[0].user;
+{name: 'Alice', age: 25}
+orders[0].user.name;
+'Alice'
+for(let order of orders){
+    for(let key in order){
+        console.log(key, order[key]);
+    }
+}
+VM259:3 id 1
+VM259:3 user {name: 'Alice', age: 25}
+VM259:3 total 100
+VM259:3 status completed
+VM259:3 id 2
+VM259:3 user {name: 'Bob', age: 30}
+VM259:3 total 50
+VM259:3 status pending
+VM259:3 id 3
+VM259:3 user {name: 'Charlie', age: 35}
+VM259:3 total 200
+VM259:3 status completed
+VM259:3 id 4
+VM259:3 user {name: 'David', age: 28}
+VM259:3 total 150
+VM259:3 status completed
+undefined
+var obj = {
+    arr:[10,20,30,40, 99, 55, 11, 100],
+    even:[],
+    odd:[],
+    evenOdd(){
+        //console.log(this.arr);
+        this.arr.forEach(function(e){
+           if(e%2==0){
+               this.even.push(e);
+           } 
+            else{
+                this.odd.push(e);
+            }
+        });
+    }
+    
+} 
+obj.evenOdd();
+
+VM480:9 Uncaught TypeError: Cannot read properties of undefined (reading 'push')
+    at <anonymous>:9:26
+    at Array.forEach (<anonymous>)
+    at Object.evenOdd (<anonymous>:7:18)
+    at <anonymous>:18:5
+(anonymous) @ VM480:9
+evenOdd @ VM480:7
+(anonymous) @ VM480:18
+var obj = {
+    arr:[10,20,30,40, 99, 55, 11, 100],
+    even:[],
+    odd:[],
+    evenOdd(){
+        const that = this;
+        //console.log(this.arr);
+        that.arr.forEach(function(e){
+           if(e%2==0){
+               that.even.push(e);
+           } 
+            else{
+                that.odd.push(e);
+            }
+        });
+    }
+    
+} 
+obj.evenOdd();
+
+undefined
+obj.evenOdd;
+ƒ evenOdd(){
+        const that = this;
+        //console.log(this.arr);
+        that.arr.forEach(function(e){
+           if(e%2==0){
+               that.even.push(e);
+           } 
+            else{
+ …
+obj.even;
+(5) [10, 20, 30, 40, 100]
+obj.odd;
+(3) [99, 55, 11]
+var obj = {
+    arr:[10,20,30,40, 99, 55, 11, 100],
+    even:[],
+    odd:[],
+    evenOdd(){
+        // const that = this;
+        //console.log(this.arr);
+        that.arr.forEach((e)=>{
+           if(e%2==0){
+               this.even.push(e);
+           } 
+            else{
+                this.odd.push(e);
+            }
+        });
+    }
+    
+} 
+obj.evenOdd();
+
+VM607:8 Uncaught ReferenceError: that is not defined
+    at Object.evenOdd (<anonymous>:8:9)
+    at <anonymous>:19:5
+evenOdd @ VM607:8
+(anonymous) @ VM607:19
+var obj = {
+    arr:[10,20,30,40, 99, 55, 11, 100],
+    even:[],
+    odd:[],
+    evenOdd(){
+        // const that = this;
+        //console.log(this.arr);
+        this.arr.forEach((e)=>{
+           if(e%2==0){
+               this.even.push(e);
+           } 
+            else{
+                this.odd.push(e);
+            }
+        });
+    }
+    
+} 
+obj.evenOdd();
+
+undefined
