@@ -1,0 +1,384 @@
+// Blocking Code
+undefined
+console.log("Hello ");
+var a= 10;
+var b = 20;
+var c = a + b;
+console.log("Sum is "+c);
+VM274:1 Hello 
+VM274:5 Sum is 30
+undefined
+// Non Blocking Code
+undefined
+setTimeout(function(){
+    console.log("I am the Time out ");
+}, 3000);
+1
+VM472:2 I am the Time out 
+function doWork(){
+    setTimeout(function(){
+    console.log("I am the Time out ");
+}, 3000);
+}
+undefined
+console.log("Start Here ");
+doWork();
+console.log("End Here ");
+VM720:1 Start Here 
+VM720:3 End Here 
+undefined
+VM516:3 I am the Time out 
+console.log("Hello");
+VM782:1 Hello
+undefined
+function show(){
+    var  a = 10;
+    var b = 20;
+}
+undefined
+show();
+undefined
+function doWork(){
+    setTimeout(function(){
+    console.log("I am the Time out ");
+}, 0);
+}
+undefined
+console.log("Start Here ");
+doWork();
+console.log("End Here ");
+VM903:1 Start Here 
+VM903:3 End Here 
+undefined
+VM895:3 I am the Time out 
+function doWork(){
+    setTimeout(function(){
+    console.log("I am the Time out ");
+}, 5000);
+}
+undefined
+console.log("Start Here ");
+doWork();
+console.log("End Here ");
+VM921:1 Start Here 
+VM921:3 End Here 
+undefined
+VM918:3 I am the Time out 
+function doWork(){
+    setTimeout(function(){
+    console.log("I am the Time out ");
+        return 1000;
+}, 5000);
+}
+undefined
+console.log("Start Here ");
+var r = doWork();
+console.log("End Here ", r);
+VM960:1 Start Here 
+VM960:3 End Here  undefined
+undefined
+VM937:3 I am the Time out 
+// SYNC  - call + wait + return
+// ASYNC - call + forget + callback
+console.log("Start Here ");
+//var r = doWork(); 
+console.log("End Here ", r);
+VM1050:3 Start Here 
+VM1050:5 End Here  undefined
+undefined
+function doWork(fn){
+    setTimeout(function(){
+    console.log("I am the Time out ");
+        fn( 1000);
+}, 5000);
+}
+undefined
+// SYNC  - call + wait + return
+// ASYNC - call + forget + callback
+function getResult(r){
+    console.log('Result is ', r);
+}
+console.log("Start Here ");
+ doWork(getResult); 
+console.log("End Here ", r);
+VM1175:6 Start Here 
+VM1175:8 End Here  undefined
+undefined
+VM1064:3 I am the Time out 
+VM1175:4 Result is  1000
+// SYNC  - call + wait + return
+// ASYNC - call + forget + callback
+ function doWork(successFn, failFn){
+    setTimeout(function(){
+    console.log("I am the Time out ");
+        successFn( 1000); // failFn("Fail Reason...")
+}, 5000);
+}
+function fail(err){
+    console.log('Fail ', err);
+}
+function getResult(r){
+    console.log('Result is ', r);
+}
+console.log("Start Here ");
+ doWork(getResult, fail);  // asyncfn(callbackfn)
+console.log("End Here ");
+VM1370:15 Start Here 
+VM1370:17 End Here 
+undefined
+VM1370:5 I am the Time out 
+VM1370:13 Result is  1000
+// SYNC  - call + wait + return
+// ASYNC - call + forget + callback
+ function doWork(successFn, failFn){
+    setTimeout(function(){
+    console.log("I am the Time out ");
+        failFn( "Fail Reason "); // failFn("Fail Reason...")
+}, 5000);
+}
+function fail(err){
+    console.log('Fail ', err);
+}
+function getResult(r){
+    console.log('Result is ', r);
+}
+console.log("Start Here ");
+ doWork(getResult, fail);  // asyncfn(callbackfn)
+console.log("End Here ");
+VM1398:15 Start Here 
+VM1398:17 End Here 
+undefined
+VM1398:5 I am the Time out 
+VM1398:10 Fail  Fail Reason 
+// SYNC  - call + wait + return
+// ASYNC - call + forget + callback
+ function doWork(successFn, failFn){
+    setTimeout(function(){
+    console.log("I am the Time out ");
+        failFn( "Fail Reason "); // failFn("Fail Reason...")
+}, 5000);
+}
+function fail(err){
+    console.log('Fail ', err);
+}
+function getResult(r){
+    setTimeout(function(){
+        
+    }, 4000);
+    console.log('Result is ', r);
+}
+console.log("Start Here ");
+ doWork(getResult, fail);  // asyncfn(callbackfn)
+console.log("End Here ");
+
+VM1478:18 Start Here 
+VM1478:20 End Here 
+undefined
+VM1478:5 I am the Time out 
+VM1478:10 Fail  Fail Reason 
+function doWork(){
+    const pr = new Promise((resolve, reject)=>{
+        // Async Code
+        setTimeout(function(){
+    console.log("I am the Time out ");
+        resolve( 1000);
+}, 5000);
+    })
+    return pr;
+}
+console.log("Start ");
+const p = doWork();
+console.log("::: End ", p);
+p.then((data)=>console.log('Success', data)).catch(err=>console.log('Error is ', err));
+console.log('end ');
+VM2060:11 Start 
+VM2060:13 ::: End  Promise {<pending>}
+VM2060:15 end 
+undefined
+VM2060:5 I am the Time out 
+VM2060:14 Success 1000
+p;
+Promise {<fulfilled>: 1000}
+function doWork(){
+    const pr = new Promise((resolve, reject)=>{
+        // Async Code
+        setTimeout(function(){
+    console.log("I am the Time out ");
+        //resolve( 1000);
+            reject('Something went wrong ');
+}, 5000);
+    })
+    return pr;
+}
+console.log("Start ");
+const p = doWork();
+console.log("::: End ", p);
+p.then((data)=>console.log('Success', data)).catch(err=>console.log('Error is ', err));
+console.log('end ');
+VM2118:12 Start 
+VM2118:14 ::: End  Promise {<pending>}
+VM2118:16 end 
+undefined
+VM2118:5 I am the Time out 
+VM2118:15 Error is  Something went wrong 
+p;
+Promise {<rejected>: 'Something went wrong '}
+function cube(num){
+    const pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+        resolve(num**3);
+    }, 7000);
+    });
+    return pr;
+}
+function total(){
+    const p = cube(2);
+    p.then(d=>{
+        cons p2 = cube(d);
+        p2.then(e=>{
+            
+        }).catch(e=>{
+            
+        })
+    }).catch(err=>{
+        
+    }
+}
+VM2507:12 Uncaught SyntaxError: Unexpected identifier 'p2'
+function cube(num){
+    const pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+        resolve(num**3);
+    }, 7000);
+    });
+    return pr;
+}
+function total(){
+    const p = cube(2);
+    p.then(d=>{
+        const p2 = cube(d);
+        p2.then(e=>{
+            
+        }).catch(e=>{
+            
+        })
+    }).catch(err=>{
+        
+    }
+}
+VM2511:20 Uncaught SyntaxError: missing ) after argument list
+function cube(num){
+    const pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+        resolve(num**3);
+    }, 7000);
+    });
+    return pr;
+}
+function total(){
+    const p = cube(2);
+    p.then(d=>{
+        const p2 = cube(d);
+        p2.then(e=>{
+            
+        }).catch(e=>{
+            
+        })
+    }).catch(err=>{
+        
+    });
+}
+undefined
+function cube(num){
+    const pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+        resolve(num**3);
+    }, 7000);
+    });
+    return pr;
+}
+function total(){
+    try{
+    const a = await cube(2);
+    const b = await cube(a);
+    const c = await cube(b);
+    }
+    catch(err){
+        console.log('Error ' ,err);
+    }
+}
+VM2677:11 Uncaught SyntaxError: await is only valid in async functions and the top level bodies of modules
+function cube(num){
+    const pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+        resolve(num**3);
+    }, 7000);
+    });
+    return pr;
+}
+async function total(){
+    try{
+    const a = await cube(2);
+    const b = await cube(a);
+    const c = await cube(b);
+    }
+    catch(err){
+        console.log('Error ' ,err);
+    }
+}
+undefined
+const p = total();
+console.log(' P is ', p);
+VM2836:2  P is  Promise {<pending>}
+undefined
+function cube(num){
+    const pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+        resolve(num**3);
+    }, 7000);
+    });
+    return pr;
+}
+async function total(){
+    try{
+    const a = await cube(2);
+    const b = await cube(a);
+    const c = await cube(b);
+        return c;
+    }
+    catch(err){
+        console.log('Error ' ,err);
+    }
+}
+undefined
+const p = total();
+p.then(d=>console.log('Data is ', d)).catch(e=>console.log('Error is ', e));
+Promise {<pending>}
+VM3171:2 Data is  134217728
+function cube(num){
+    const pr = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+        resolve(num**3);
+    }, 7000);
+    });
+    return pr;
+}
+async function total(){
+    try{
+    const a = await cube(2);
+    const b = await cube(a);
+    const c = await cube(b);
+        throw new Error('Something Went Wrong..');
+        //return c;
+    }
+    catch(err){
+        throw err;
+        console.log('Error ' ,err);
+    }
+}
+undefined
+const p = total();
+p.then(d=>console.log('Data is ', d)).catch(e=>console.log('Error is ', e));
+Promise {<pending>}
+VM3230:2 Error is  Error: Something Went Wrong..
+    at total (<anonymous>:14:15)
