@@ -1,0 +1,21 @@
+function test(){
+    console.log('I am the Test ');
+}
+undefined
+window.test(); 
+VM76:2 I am the Test 
+undefined
+test();
+VM76:2 I am the Test 
+undefined
+function test(){
+    console.log('I am the Test ', this);
+}
+undefined
+test(); // window.test() - Implicit Binding
+VM151:2 I am the Test  Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+undefined
+window instanceof Window;
+true
+typeof Window;
+'function'

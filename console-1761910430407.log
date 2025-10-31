@@ -1,0 +1,232 @@
+// OOJS - Object Literal
+undefined
+var obj = {};
+undefined
+typeof obj;
+'object'
+obj instanceof Object;
+true
+typeof Object;
+'function'
+obj.id = 1001;
+1001
+obj.name = "Amit";
+'Amit'
+obj.city = "Delhi";
+'Delhi'
+obj;
+{id: 1001, name: 'Amit', city: 'Delhi'}
+var obj = {id: 1001 , name:'Amit'};
+undefined
+var obj = {id: 1001 , name:'Amit', address:{city:'Delhi', pincode:110007}};
+undefined
+Object.keys(obj);
+(3) ['id', 'name', 'address']
+Object.values(obj);
+(3) [1001, 'Amit', {…}]
+for(let key in obj){
+    console.log(key);
+}
+VM754:2 id
+VM754:2 name
+VM754:2 address
+undefined
+for(let key in obj){
+    console.log(key, obj[key]);
+}
+VM784:2 id 1001
+VM784:2 name Amit
+VM784:2 address {city: 'Delhi', pincode: 110007}
+undefined
+var ram = {id:1001, name:'Ram', course:'JS'};
+undefined
+ var shyam = {id:1002, name:'Shyam'};
+undefined
+function createObject(id ,name,city){
+    const obj = {};
+    obj.id = id;
+    obj.name = name;
+    obj.city = city;
+    return obj;
+}
+undefined
+function createEmployeeObject(id ,name,city){
+    const obj = {};
+    obj.id = id;
+    obj.name = name;
+    obj.city = city;
+    return obj;
+}
+undefined
+var tom = createEmployeeObject(1001, 'Tom', 'Delhi');
+undefined
+tom;
+{id: 1001, name: 'Tom', city: 'Delhi'}
+typeof tom;
+'object'
+function createProduct(id , name, price){
+    const product = {};
+    product.id = id;
+    product.name = name;
+    product.price = price;
+    return product;
+}
+undefined
+const tv = createProduct(1, 'Samsung', 90000);
+undefined
+tv;
+{id: 1, name: 'Samsung', price: 90000}
+tv instanceof Object;
+true
+var kim = createEmployeeObject(1002, 'Kim', 'Delhi');
+undefined
+tom;
+{id: 1001, name: 'Tom', city: 'Delhi'}
+kim;
+{id: 1002, name: 'Kim', city: 'Delhi'}
+function createProduct(id , name, price){
+    const product = {};
+    product.id = id;
+    product.name = name;
+    product.price = price;
+    product.computeGST = function(){
+        
+    }
+    return product;
+}
+undefined
+const tv = createProduct(1, 'Samsung', 90000);
+undefined
+const phone = createProduct(2, 'Apple', 190000);
+undefined
+tv;
+{id: 1, name: 'Samsung', price: 90000, computeGST: ƒ}
+phone;
+{id: 2, name: 'Apple', price: 190000, computeGST: ƒ}
+ram;
+{id: 1001, name: 'Ram', course: 'JS'}
+delete ram.id;
+true
+ram;
+{name: 'Ram', course: 'JS'}
+ram.course = 'JS course';
+'JS course'
+ram;
+{name: 'Ram', course: 'JS course'}
+tv instanceof Object;
+true
+kim instanceof Object;
+true
+tv instanceof createProduct;
+false
+function Employee(id , name, salary){
+    console.log('This is ', this);
+}
+var tom = new Employee(1001, 'Tom',9999);
+VM2380:2 This is  Employee {}
+undefined
+tom;
+Employee {}
+tom instanceof Employee;
+true
+typeof Employee;
+'function'
+tom instanceof Object;
+true
+function Employee(id , name, salary){
+    console.log('This is ', this);
+    this.id = id;
+    this.name = name;
+    this.salary =salary;
+    this.printEmp = function(){
+        
+    }
+}
+var tom = new Employee(1001, 'Tom',9999);
+VM2613:2 This is  Employee {}id: 1001name: "Tom"printEmp: ƒ ()salary: 9999[[Prototype]]: Object
+undefined
+console.dir(Employee);
+VM2693:1 ƒ Employee(id , name, salary)length: 3name: "Employee"prototype: {}arguments: nullcaller: null[[FunctionLocation]]: VM2613:1[[Prototype]]: ƒ ()[[Scopes]]: Scopes[2]
+undefined
+function Employee(id , name, salary){
+    console.log('This is ', this);
+    this.id = id;
+    this.name = name;
+    this.salary =salary;
+    
+}
+Employee.prototype.printEmp = function(){
+    console.log('id is ',this.id , ' name is ', this.name);
+}
+var tom = new Employee(1001, 'Tom',9999);
+VM2856:2 This is  Employee {}
+ƒ (){
+    console.log('id is ',this.id , ' name is ', this.name);
+}
+tom;
+Employee {id: 1001, name: 'Tom', salary: 9999}
+var vim = new Employee(1002, 'Vim', 7777);
+VM2856:2 This is  Employee {}
+undefined
+vim;
+Employee {id: 1002, name: 'Vim', salary: 7777}
+tom;
+Employee {id: 1001, name: 'Tom', salary: 9999}
+tom.printEmp();
+VM2856:9 id is  1001  name is  Tom
+undefined
+vim.printEmp();
+VM2856:9 id is  1002  name is  Vim
+undefined
+console.dir(tom);
+VM3109:1 Employeeid: 1001name: "Tom"salary: 9999[[Prototype]]: Object
+undefined
+vim.__proto__ == Employee.prototype;
+true
+vim.__proto__.__proto__ == Object.prototype;
+true
+vim.__proto__ == tom.__proto__;
+true
+tom.__proto__.printEmp;
+ƒ (){
+    console.log('id is ',this.id , ' name is ', this.name);
+}
+Window.prototype;
+Window {TEMPORARY: 0, PERSISTENT: 1, Symbol(Symbol.toStringTag): 'Window'}
+Window.prototype.sayWelcome = function(){
+    console.log("Welcome User");
+};
+ƒ (){
+    console.log("Welcome User");
+}
+window.sayWelcome();
+VM3628:2 Welcome User
+undefined
+Array.prototype.reverseString = function(){
+    
+}
+ƒ (){
+    
+}
+tom.printEmp();
+VM2856:9 id is  1001  name is  Tom
+undefined
+tom.toString();
+'[object Object]'
+tom.id;
+1001
+tom;
+Employee {id: 1001, name: 'Tom', salary: 9999}
+tom.printEmp();
+VM2856:9 id is  1001  name is  Tom
+undefined
+tom.__proto__.printEmp;
+ƒ (){
+    console.log('id is ',this.id , ' name is ', this.name);
+}
+tom.__proto__.__proto__.toString;
+ƒ toString() { [native code] }
+tom.__proto__.__proto__.__proto__;
+null
+vim.__proto__ == tom.__proto__;
+true

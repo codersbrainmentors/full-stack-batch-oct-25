@@ -1,0 +1,152 @@
+const links = document.getElementsByTagName('a');
+undefined
+links.length;
+26
+links.forEach;
+undefined
+link;
+VM713:1 Uncaught ReferenceError: link is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM713:1
+links;
+HTMLCollection(26) [a.MV3Tnb, a.MV3Tnb, a.gb_Z, a.gb_Z, a.gb_B, a.gb_B, a.gb_B.gb_0a, a, a, a, a, a, a, a, a, a, a.pHiOh, a.pHiOh, a.pHiOh, a.pHiOh, a.pHiOh, a, a, a, a, a]
+var arr = [10,20,30];
+undefined
+arr.__proto__ == Array.prototype;
+true
+Array.prototype.forEach;
+ƒ forEach() { [native code] }
+arr.forEach;
+ƒ forEach() { [native code] }
+arr.__proto__.forEach
+ƒ forEach() { [native code] }
+arr.forEach(e=>console.log(e))
+VM1186:1 10
+VM1186:1 20
+VM1186:1 30
+undefined
+const g = Array.prototype.forEach.bind(links);
+undefined
+g;
+ƒ forEach() { [native code] }
+g(e=>console.log(e));
+VM1356:1 <a class=​"MV3Tnb" href=​"https:​/​/​about.google/​?fg=1&utm_source=google-IN&utm_medium=referral&utm_campaign=hp-header" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​about.google/​%3Ffg%3D1%26utm_source%3Dgoogle-IN%26utm_medium%3Dreferral%26utm_campaign%3Dhp-header&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQkNQCCAI&opi=89978449">​About​</a>​
+VM1356:1 <a class=​"MV3Tnb" href=​"https:​/​/​store.google.com/​IN?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-IN" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​store.google.com/​IN%3Futm_source%3Dhp_header%26utm_medium%3Dgoogle_ooo%26utm_campaign%3DGS100042%26hl%3Den-IN&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQpMwCCAM&opi=89978449">​Store​</a>​
+VM1356:1 <a class=​"gb_Z" aria-label=​"Gmail " data-pid=​"23" href=​"https:​/​/​mail.google.com/​mail/​&ogbl" target=​"_top">​Gmail​</a>​
+VM1356:1 <a class=​"gb_Z" aria-label=​"Search for Images " data-pid=​"2" href=​"https:​/​/​www.google.com/​imghp?hl=en&ogbl" target=​"_top">​Images​</a>​
+VM1356:1 <a class=​"gb_B" aria-label=​"Search Labs" href=​"https:​/​/​labs.google.com/​search?source=hp" target=​"_top" role=​"button" tabindex=​"0">​…​</a>​
+VM1356:1 <a class=​"gb_B" aria-label=​"Google apps" href=​"https:​/​/​www.google.co.in/​intl/​en/​about/​products" aria-expanded=​"false" role=​"button" tabindex=​"0">​…​</a>​
+VM1356:1 <a class=​"gb_B gb_0a" aria-label=​"Google Account:​ amit4git  
+(amit4gitall@gmail.com)​, Important account alert" href=​"https:​/​/​accounts.google.com/​SignOutOptions?hl=en&continue=https:​/​/​www.google.com/​&ec=futura_exp_og_si_72776762_e" aria-expanded=​"false" aria-haspopup=​"true" role=​"button" tabindex=​"0">​…​</a>​
+VM1356:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=hi&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCU">​हिन्दी​</a>​
+VM1356:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=bn&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCY">​বাংলা​</a>​
+VM1356:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=te&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCc">​తెలుగు​</a>​
+VM1356:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=mr&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCg">​मराठी​</a>​
+VM1356:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=ta&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCk">​தமிழ்​</a>​
+VM1356:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=gu&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCo">​ગુજરાતી​</a>​
+VM1356:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=kn&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCs">​ಕನ್ನಡ​</a>​
+VM1356:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=ml&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCw">​മലയാളം​</a>​
+VM1356:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=pa&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCC0">​ਪੰਜਾਬੀ​</a>​
+VM1356:1 <a class=​"pHiOh" href=​"https:​/​/​www.google.com/​intl/​en_in/​ads/​?subid=ww-ww-et-g-awa-a-g_hpaf…m_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​www.google.com/​intl/​en_in/​ads/​%3Fsubid%3Dww-ww-et-g-awa-a-g_hpafoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpafooter%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQkdQCCC4&opi=89978449">​Advertising​</a>​
+VM1356:1 <a class=​"pHiOh" href=​"https:​/​/​www.google.com/​services/​?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o…m_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​www.google.com/​services/​%3Fsubid%3Dww-ww-et-g-awa-a-g_hpbfoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpbfooter%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQktQCCC8&opi=89978449">​Business​</a>​
+VM1356:1 <a class=​"pHiOh" href=​"https:​/​/​google.com/​search/​howsearchworks/​?fg=1">​ How Search works ​</a>​
+VM1356:1 <a class=​"pHiOh" href=​"https:​/​/​policies.google.com/​privacy?hl=en-IN&fg=1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​policies.google.com/​privacy%3Fhl%3Den-IN%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ8awCCDA&opi=89978449">​Privacy​</a>​
+VM1356:1 <a class=​"pHiOh" href=​"https:​/​/​policies.google.com/​terms?hl=en-IN&fg=1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​policies.google.com/​terms%3Fhl%3Den-IN%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ8qwCCDE&opi=89978449">​Terms​</a>​
+VM1356:1 <a href=​"https:​/​/​www.google.com/​preferences?hl=en-IN&fg=1" role=​"menuitem" tabindex=​"-1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​www.google.com/​preferences%3Fhl%3Den-IN%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQs4gOCDQ&opi=89978449">​Search settings​</a>​
+VM1356:1 <a href=​"/​advanced_search?hl=en-IN&fg=1" role=​"menuitem" tabindex=​"-1" ping=​"/​url?sa=t&rct=j&source=webhp&url=/​advanced_search%3Fhl%3Den-IN%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ3ogOCDU&opi=89978449">​Advanced search​</a>​
+VM1356:1 <a href=​"https:​/​/​myactivity.google.com/​privacyadvisor/​search?utm_source=googlemenu&fg=1" role=​"menuitem" tabindex=​"-1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​myactivity.google.com/​privacyadvisor/​search%3Futm_source%3Dgooglemenu%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQgoYOCDY&opi=89978449">​Your data in Search​</a>​
+VM1356:1 <a href=​"https:​/​/​myactivity.google.com/​product/​search?utm_source=google&hl=en-IN&fg=1" role=​"menuitem" tabindex=​"-1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​myactivity.google.com/​product/​search%3Futm_source%3Dgoogle%26hl%3Den-IN%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ4YgOCDc&opi=89978449">​Search history​</a>​
+VM1356:1 <a href=​"https:​/​/​support.google.com/​websearch/​?p=ws_results_help&hl=en-IN&fg=1" role=​"menuitem" tabindex=​"-1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​support.google.com/​websearch/​%3Fp%3Dws_results_help%26hl%3Den-IN%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ4IgOCDg&opi=89978449">​Search help​</a>​
+undefined
+ Array.prototype.forEach.call(links, (e)=>console.log(e));
+VM1550:1 <a class=​"MV3Tnb" href=​"https:​/​/​about.google/​?fg=1&utm_source=google-IN&utm_medium=referral&utm_campaign=hp-header" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​about.google/​%3Ffg%3D1%26utm_source%3Dgoogle-IN%26utm_medium%3Dreferral%26utm_campaign%3Dhp-header&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQkNQCCAI&opi=89978449">​About​</a>​
+VM1550:1 <a class=​"MV3Tnb" href=​"https:​/​/​store.google.com/​IN?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-IN" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​store.google.com/​IN%3Futm_source%3Dhp_header%26utm_medium%3Dgoogle_ooo%26utm_campaign%3DGS100042%26hl%3Den-IN&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQpMwCCAM&opi=89978449">​Store​</a>​
+VM1550:1 <a class=​"gb_Z" aria-label=​"Gmail " data-pid=​"23" href=​"https:​/​/​mail.google.com/​mail/​&ogbl" target=​"_top">​Gmail​</a>​
+VM1550:1 <a class=​"gb_Z" aria-label=​"Search for Images " data-pid=​"2" href=​"https:​/​/​www.google.com/​imghp?hl=en&ogbl" target=​"_top">​Images​</a>​
+VM1550:1 <a class=​"gb_B" aria-label=​"Search Labs" href=​"https:​/​/​labs.google.com/​search?source=hp" target=​"_top" role=​"button" tabindex=​"0">​…​</a>​
+VM1550:1 <a class=​"gb_B" aria-label=​"Google apps" href=​"https:​/​/​www.google.co.in/​intl/​en/​about/​products" aria-expanded=​"false" role=​"button" tabindex=​"0">​…​</a>​
+VM1550:1 <a class=​"gb_B gb_0a" aria-label=​"Google Account:​ amit4git  
+(amit4gitall@gmail.com)​, Important account alert" href=​"https:​/​/​accounts.google.com/​SignOutOptions?hl=en&continue=https:​/​/​www.google.com/​&ec=futura_exp_og_si_72776762_e" aria-expanded=​"false" aria-haspopup=​"true" role=​"button" tabindex=​"0">​…​</a>​
+VM1550:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=hi&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCU">​हिन्दी​</a>​
+VM1550:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=bn&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCY">​বাংলা​</a>​
+VM1550:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=te&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCc">​తెలుగు​</a>​
+VM1550:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=mr&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCg">​मराठी​</a>​
+VM1550:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=ta&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCk">​தமிழ்​</a>​
+VM1550:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=gu&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCo">​ગુજરાતી​</a>​
+VM1550:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=kn&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCs">​ಕನ್ನಡ​</a>​
+VM1550:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=ml&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCw">​മലയാളം​</a>​
+VM1550:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=pa&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCC0">​ਪੰਜਾਬੀ​</a>​
+VM1550:1 <a class=​"pHiOh" href=​"https:​/​/​www.google.com/​intl/​en_in/​ads/​?subid=ww-ww-et-g-awa-a-g_hpaf…m_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​www.google.com/​intl/​en_in/​ads/​%3Fsubid%3Dww-ww-et-g-awa-a-g_hpafoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpafooter%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQkdQCCC4&opi=89978449">​Advertising​</a>​
+VM1550:1 <a class=​"pHiOh" href=​"https:​/​/​www.google.com/​services/​?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o…m_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​www.google.com/​services/​%3Fsubid%3Dww-ww-et-g-awa-a-g_hpbfoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpbfooter%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQktQCCC8&opi=89978449">​Business​</a>​
+VM1550:1 <a class=​"pHiOh" href=​"https:​/​/​google.com/​search/​howsearchworks/​?fg=1">​ How Search works ​</a>​
+VM1550:1 <a class=​"pHiOh" href=​"https:​/​/​policies.google.com/​privacy?hl=en-IN&fg=1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​policies.google.com/​privacy%3Fhl%3Den-IN%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ8awCCDA&opi=89978449">​Privacy​</a>​
+VM1550:1 <a class=​"pHiOh" href=​"https:​/​/​policies.google.com/​terms?hl=en-IN&fg=1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​policies.google.com/​terms%3Fhl%3Den-IN%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ8qwCCDE&opi=89978449">​Terms​</a>​
+VM1550:1 <a href=​"https:​/​/​www.google.com/​preferences?hl=en-IN&fg=1" role=​"menuitem" tabindex=​"-1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​www.google.com/​preferences%3Fhl%3Den-IN%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQs4gOCDQ&opi=89978449">​Search settings​</a>​
+VM1550:1 <a href=​"/​advanced_search?hl=en-IN&fg=1" role=​"menuitem" tabindex=​"-1" ping=​"/​url?sa=t&rct=j&source=webhp&url=/​advanced_search%3Fhl%3Den-IN%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ3ogOCDU&opi=89978449">​Advanced search​</a>​
+VM1550:1 <a href=​"https:​/​/​myactivity.google.com/​privacyadvisor/​search?utm_source=googlemenu&fg=1" role=​"menuitem" tabindex=​"-1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​myactivity.google.com/​privacyadvisor/​search%3Futm_source%3Dgooglemenu%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQgoYOCDY&opi=89978449">​Your data in Search​</a>​
+VM1550:1 <a href=​"https:​/​/​myactivity.google.com/​product/​search?utm_source=google&hl=en-IN&fg=1" role=​"menuitem" tabindex=​"-1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​myactivity.google.com/​product/​search%3Futm_source%3Dgoogle%26hl%3Den-IN%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ4YgOCDc&opi=89978449">​Search history​</a>​
+VM1550:1 <a href=​"https:​/​/​support.google.com/​websearch/​?p=ws_results_help&hl=en-IN&fg=1" role=​"menuitem" tabindex=​"-1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​support.google.com/​websearch/​%3Fp%3Dws_results_help%26hl%3Den-IN%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ4IgOCDg&opi=89978449">​Search help​</a>​
+undefined
+ Array.prototype.forEach.call(links, (e)=>console.log(e));
+VM1631:1 <a class=​"MV3Tnb" href=​"https:​/​/​about.google/​?fg=1&utm_source=google-IN&utm_medium=referral&utm_campaign=hp-header" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​about.google/​%3Ffg%3D1%26utm_source%3Dgoogle-IN%26utm_medium%3Dreferral%26utm_campaign%3Dhp-header&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQkNQCCAI&opi=89978449">​About​</a>​
+VM1631:1 <a class=​"MV3Tnb" href=​"https:​/​/​store.google.com/​IN?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-IN" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​store.google.com/​IN%3Futm_source%3Dhp_header%26utm_medium%3Dgoogle_ooo%26utm_campaign%3DGS100042%26hl%3Den-IN&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQpMwCCAM&opi=89978449">​Store​</a>​
+VM1631:1 <a class=​"gb_Z" aria-label=​"Gmail " data-pid=​"23" href=​"https:​/​/​mail.google.com/​mail/​&ogbl" target=​"_top">​Gmail​</a>​
+VM1631:1 <a class=​"gb_Z" aria-label=​"Search for Images " data-pid=​"2" href=​"https:​/​/​www.google.com/​imghp?hl=en&ogbl" target=​"_top">​Images​</a>​
+VM1631:1 <a class=​"gb_B" aria-label=​"Search Labs" href=​"https:​/​/​labs.google.com/​search?source=hp" target=​"_top" role=​"button" tabindex=​"0">​…​</a>​
+VM1631:1 <a class=​"gb_B" aria-label=​"Google apps" href=​"https:​/​/​www.google.co.in/​intl/​en/​about/​products" aria-expanded=​"false" role=​"button" tabindex=​"0">​…​</a>​
+VM1631:1 <a class=​"gb_B gb_0a" aria-label=​"Google Account:​ amit4git  
+(amit4gitall@gmail.com)​, Important account alert" href=​"https:​/​/​accounts.google.com/​SignOutOptions?hl=en&continue=https:​/​/​www.google.com/​&ec=futura_exp_og_si_72776762_e" aria-expanded=​"false" aria-haspopup=​"true" role=​"button" tabindex=​"0">​…​</a>​
+VM1631:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=hi&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCU">​हिन्दी​</a>​
+VM1631:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=bn&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCY">​বাংলা​</a>​
+VM1631:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=te&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCc">​తెలుగు​</a>​
+VM1631:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=mr&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCg">​मराठी​</a>​
+VM1631:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=ta&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCk">​தமிழ்​</a>​
+VM1631:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=gu&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCo">​ગુજરાતી​</a>​
+VM1631:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=kn&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCs">​ಕನ್ನಡ​</a>​
+VM1631:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=ml&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCw">​മലയാളം​</a>​
+VM1631:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=pa&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCC0">​ਪੰਜਾਬੀ​</a>​
+VM1631:1 <a class=​"pHiOh" href=​"https:​/​/​www.google.com/​intl/​en_in/​ads/​?subid=ww-ww-et-g-awa-a-g_hpaf…m_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​www.google.com/​intl/​en_in/​ads/​%3Fsubid%3Dww-ww-et-g-awa-a-g_hpafoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpafooter%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQkdQCCC4&opi=89978449">​Advertising​</a>​
+VM1631:1 <a class=​"pHiOh" href=​"https:​/​/​www.google.com/​services/​?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o…m_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​www.google.com/​services/​%3Fsubid%3Dww-ww-et-g-awa-a-g_hpbfoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpbfooter%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQktQCCC8&opi=89978449">​Business​</a>​
+VM1631:1 <a class=​"pHiOh" href=​"https:​/​/​google.com/​search/​howsearchworks/​?fg=1">​ How Search works ​</a>​
+VM1631:1 <a class=​"pHiOh" href=​"https:​/​/​policies.google.com/​privacy?hl=en-IN&fg=1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​policies.google.com/​privacy%3Fhl%3Den-IN%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ8awCCDA&opi=89978449">​Privacy​</a>​
+VM1631:1 <a class=​"pHiOh" href=​"https:​/​/​policies.google.com/​terms?hl=en-IN&fg=1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​policies.google.com/​terms%3Fhl%3Den-IN%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ8qwCCDE&opi=89978449">​Terms​</a>​
+VM1631:1 <a href=​"https:​/​/​www.google.com/​preferences?hl=en-IN&fg=1" role=​"menuitem" tabindex=​"-1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​www.google.com/​preferences%3Fhl%3Den-IN%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQs4gOCDQ&opi=89978449">​Search settings​</a>​
+VM1631:1 <a href=​"/​advanced_search?hl=en-IN&fg=1" role=​"menuitem" tabindex=​"-1" ping=​"/​url?sa=t&rct=j&source=webhp&url=/​advanced_search%3Fhl%3Den-IN%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ3ogOCDU&opi=89978449">​Advanced search​</a>​
+VM1631:1 <a href=​"https:​/​/​myactivity.google.com/​privacyadvisor/​search?utm_source=googlemenu&fg=1" role=​"menuitem" tabindex=​"-1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​myactivity.google.com/​privacyadvisor/​search%3Futm_source%3Dgooglemenu%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQgoYOCDY&opi=89978449">​Your data in Search​</a>​
+VM1631:1 <a href=​"https:​/​/​myactivity.google.com/​product/​search?utm_source=google&hl=en-IN&fg=1" role=​"menuitem" tabindex=​"-1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​myactivity.google.com/​product/​search%3Futm_source%3Dgoogle%26hl%3Den-IN%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ4YgOCDc&opi=89978449">​Search history​</a>​
+VM1631:1 <a href=​"https:​/​/​support.google.com/​websearch/​?p=ws_results_help&hl=en-IN&fg=1" role=​"menuitem" tabindex=​"-1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​support.google.com/​websearch/​%3Fp%3Dws_results_help%26hl%3Den-IN%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ4IgOCDg&opi=89978449">​Search help​</a>​
+undefined
+ Array.prototype.forEach.apply(links, (e)=>console.log(e));
+VM1648:1 Uncaught TypeError: undefined is not a function
+    at HTMLCollection.forEach (<anonymous>)
+    at <anonymous>:1:26
+(anonymous) @ VM1648:1
+ Array.prototype.forEach.apply(links, [(e)=>console.log(e)]);
+VM1667:1 <a class=​"MV3Tnb" href=​"https:​/​/​about.google/​?fg=1&utm_source=google-IN&utm_medium=referral&utm_campaign=hp-header" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​about.google/​%3Ffg%3D1%26utm_source%3Dgoogle-IN%26utm_medium%3Dreferral%26utm_campaign%3Dhp-header&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQkNQCCAI&opi=89978449">​About​</a>​
+VM1667:1 <a class=​"MV3Tnb" href=​"https:​/​/​store.google.com/​IN?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-IN" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​store.google.com/​IN%3Futm_source%3Dhp_header%26utm_medium%3Dgoogle_ooo%26utm_campaign%3DGS100042%26hl%3Den-IN&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQpMwCCAM&opi=89978449">​Store​</a>​
+VM1667:1 <a class=​"gb_Z" aria-label=​"Gmail " data-pid=​"23" href=​"https:​/​/​mail.google.com/​mail/​&ogbl" target=​"_top">​Gmail​</a>​
+VM1667:1 <a class=​"gb_Z" aria-label=​"Search for Images " data-pid=​"2" href=​"https:​/​/​www.google.com/​imghp?hl=en&ogbl" target=​"_top">​Images​</a>​
+VM1667:1 <a class=​"gb_B" aria-label=​"Search Labs" href=​"https:​/​/​labs.google.com/​search?source=hp" target=​"_top" role=​"button" tabindex=​"0">​…​</a>​
+VM1667:1 <a class=​"gb_B" aria-label=​"Google apps" href=​"https:​/​/​www.google.co.in/​intl/​en/​about/​products" aria-expanded=​"false" role=​"button" tabindex=​"0">​…​</a>​
+VM1667:1 <a class=​"gb_B gb_0a" aria-label=​"Google Account:​ amit4git  
+(amit4gitall@gmail.com)​, Important account alert" href=​"https:​/​/​accounts.google.com/​SignOutOptions?hl=en&continue=https:​/​/​www.google.com/​&ec=futura_exp_og_si_72776762_e" aria-expanded=​"false" aria-haspopup=​"true" role=​"button" tabindex=​"0">​…​</a>​
+VM1667:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=hi&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCU">​हिन्दी​</a>​
+VM1667:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=bn&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCY">​বাংলা​</a>​
+VM1667:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=te&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCc">​తెలుగు​</a>​
+VM1667:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=mr&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCg">​मराठी​</a>​
+VM1667:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=ta&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCk">​தமிழ்​</a>​
+VM1667:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=gu&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCo">​ગુજરાતી​</a>​
+VM1667:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=kn&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCs">​ಕನ್ನಡ​</a>​
+VM1667:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=ml&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCCw">​മലയാളം​</a>​
+VM1667:1 <a href=​"https:​/​/​www.google.com/​setprefs?sig=0_bE2N_AnROp1BivFiASTMmzTEMYo%3D&hl=pa&source=homepage&sa=X&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ2ZgBCC0">​ਪੰਜਾਬੀ​</a>​
+VM1667:1 <a class=​"pHiOh" href=​"https:​/​/​www.google.com/​intl/​en_in/​ads/​?subid=ww-ww-et-g-awa-a-g_hpaf…m_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​www.google.com/​intl/​en_in/​ads/​%3Fsubid%3Dww-ww-et-g-awa-a-g_hpafoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpafooter%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQkdQCCC4&opi=89978449">​Advertising​</a>​
+VM1667:1 <a class=​"pHiOh" href=​"https:​/​/​www.google.com/​services/​?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o…m_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​www.google.com/​services/​%3Fsubid%3Dww-ww-et-g-awa-a-g_hpbfoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpbfooter%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQktQCCC8&opi=89978449">​Business​</a>​
+VM1667:1 <a class=​"pHiOh" href=​"https:​/​/​google.com/​search/​howsearchworks/​?fg=1">​ How Search works ​</a>​
+VM1667:1 <a class=​"pHiOh" href=​"https:​/​/​policies.google.com/​privacy?hl=en-IN&fg=1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​policies.google.com/​privacy%3Fhl%3Den-IN%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ8awCCDA&opi=89978449">​Privacy​</a>​
+VM1667:1 <a class=​"pHiOh" href=​"https:​/​/​policies.google.com/​terms?hl=en-IN&fg=1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​policies.google.com/​terms%3Fhl%3Den-IN%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ8qwCCDE&opi=89978449">​Terms​</a>​
+VM1667:1 <a href=​"https:​/​/​www.google.com/​preferences?hl=en-IN&fg=1" role=​"menuitem" tabindex=​"-1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​www.google.com/​preferences%3Fhl%3Den-IN%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQs4gOCDQ&opi=89978449">​Search settings​</a>​
+VM1667:1 <a href=​"/​advanced_search?hl=en-IN&fg=1" role=​"menuitem" tabindex=​"-1" ping=​"/​url?sa=t&rct=j&source=webhp&url=/​advanced_search%3Fhl%3Den-IN%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ3ogOCDU&opi=89978449">​Advanced search​</a>​
+VM1667:1 <a href=​"https:​/​/​myactivity.google.com/​privacyadvisor/​search?utm_source=googlemenu&fg=1" role=​"menuitem" tabindex=​"-1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​myactivity.google.com/​privacyadvisor/​search%3Futm_source%3Dgooglemenu%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQgoYOCDY&opi=89978449">​Your data in Search​</a>​
+VM1667:1 <a href=​"https:​/​/​myactivity.google.com/​product/​search?utm_source=google&hl=en-IN&fg=1" role=​"menuitem" tabindex=​"-1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​myactivity.google.com/​product/​search%3Futm_source%3Dgoogle%26hl%3Den-IN%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ4YgOCDc&opi=89978449">​Search history​</a>​
+VM1667:1 <a href=​"https:​/​/​support.google.com/​websearch/​?p=ws_results_help&hl=en-IN&fg=1" role=​"menuitem" tabindex=​"-1" ping=​"/​url?sa=t&rct=j&source=webhp&url=https:​/​/​support.google.com/​websearch/​%3Fp%3Dws_results_help%26hl%3Den-IN%26fg%3D1&ved=0ahUKEwjelLr7nc6QAxU9SGwGHVtRFDcQ4IgOCDg&opi=89978449">​Search help​</a>​
+undefined

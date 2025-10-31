@@ -1,0 +1,50 @@
+class Employee{
+    
+}
+undefined
+typeof Employee;
+'function'
+class Employee{
+    constructor(id , name, salary){
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+    }
+    show(){
+        console.log("I am the show");
+    }
+}
+undefined
+Employee.prototype;
+{show: ƒ}
+Employee.prototype.show = function(x,y){
+    console.log("this is new Show ");
+}
+ƒ (x,y){
+    console.log("this is new Show ");
+}
+Employee.prototype;
+{show: ƒ}
+var ram = new Employee(1001, 'Ram', 5555);
+undefined
+ram.show();
+VM333:2 this is new Show 
+undefined
+ram.__proto__;
+{show: ƒ}
+ram.__proto__.show;
+ƒ (x,y){
+    console.log("this is new Show ");
+}
+ram.__proto__.show();
+VM333:2 this is new Show 
+undefined
+ram.show();
+VM333:2 this is new Show 
+undefined
+delete ram.__proto__.show;
+true
+ram;
+Employee {id: 1001, name: 'Ram', salary: 5555}id: 1001name: "Ram"salary: 5555[[Prototype]]: Objectconstructor: class Employee[[Prototype]]: Object
+ram.__proto__;
+{}

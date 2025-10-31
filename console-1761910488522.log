@@ -1,0 +1,95 @@
+// ABC
+undefined
+function whoAmI(){
+    console.log('I am ' ,this.name);
+}
+undefined
+var name = 'Amit';
+undefined
+window.name;
+'Amit'
+window == this;
+true
+whoAmI(); // window.whoAmI()
+VM304:2 I am  Amit
+undefined
+var obj = {
+    name:'Tom',
+    show(){
+        console.log("i am ", this.name);
+    }
+}
+undefined
+obj.show();
+VM581:4 i am  Tom
+undefined
+var obj2 = {name:'kim'};
+undefined
+obj.show.call(obj2);
+VM581:4 i am  kim
+undefined
+obj.show.apply(obj2);
+VM581:4 i am  kim
+undefined
+var fn = obj.show.bind(obj2);
+undefined
+fn();
+VM581:4 i am  kim
+undefined
+var obj = {
+    name:'Tom',
+    show(a,b,c,d){
+        console.log("i am ", this.name, a, b, c, d);
+    }
+}
+undefined
+obj.show.call(obj2,100,200,300,400);
+VM842:4 i am  kim 100 200 300 400
+undefined
+const tt = [100,200,300,400];
+obj.show.apply(obj2,tt);
+VM842:4 i am  kim 100 200 300 400
+undefined
+var obj = {
+    name:'Tom',
+    show : (a,b,c,d)=>{
+        console.log("i am ", this.name, a, b, c, d);
+    }
+}
+undefined
+obj.show();
+VM1023:4 i am  Amit undefined undefined undefined undefined
+undefined
+class A{
+    constructor(){
+        
+    }
+}
+class B extends A{
+    constructor(){
+        super();
+    }
+}
+undefined
+Math.random();
+0.8630278568530819
+Math.random() * 10;
+1.2823684882760156
+Math.random() * 10;
+6.1585943474311025
+Math.random() * 10;
+0.4202612850110987
+Math.random() * 10;
+9.175983059926471
+Math.random() * 10;
+4.699233287994144
+Math.random() * 10;
+7.403640966578341
+parseInt(Math.random() * 10);
+2
+parseInt(Math.random() * 10);
+6
+parseInt(Math.random() * 10);
+5
+parseInt(Math.random() * 10);
+9
